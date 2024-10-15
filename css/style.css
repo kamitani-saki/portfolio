@@ -35,7 +35,7 @@ nav ul li:last-child {
 }
 
 .main {
-  width: 1160px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 .first_view {
@@ -54,15 +54,15 @@ nav ul li:last-child {
 }
 
 .top_works {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   position: absolute;
   left: 470px;
   top: 712px;
 }
 .top_works a {
   display: block;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .top_works img {
