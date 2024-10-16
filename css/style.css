@@ -88,6 +88,7 @@ header {
   background-image: url(../images/top_background_left-100.jpg);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: left top;
   height: 100vh;
 }
 .works_content {
