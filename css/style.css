@@ -35,6 +35,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: contain;
+  overflow-x: hidden;
 }
 
 /* ヘッダー */
@@ -45,7 +46,6 @@ header {
   width: 100%;
   height: 100vh;
   position: relative;
-  overflow-x: hidden;
 }
 .header_wrap {
   display: flex;
@@ -143,7 +143,7 @@ header {
 /* works */
 .works {
   margin-top: 300px;
-  overflow: hidden;
+  position: relative;
 }
 .woks_all {
   margin-left: 10%;
@@ -193,7 +193,57 @@ header {
   margin: 45px 40px;
   border-top: solid 2px;
 }
-.arrow {
+/* スクロールダウンの位置 */
+.scroll {
+  position: absolute;
+  right: 50%;
+}
+/* 線のアニメーション部分 */
+.scroll::before {
+  animation: scroll 2s infinite;
+  background-color: #000;
+  bottom: 10px;
+  content: "";
+  height: 1px;
+  left: 60px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 100px;
+  z-index: 2;
+}
+/* 線の背景色 */
+.scroll::after {
+  background-color: #ccc;
+  bottom: 7px;
+  content: "";
+  height: 1px;
+  left: 60px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 100px;
+}
+/* 線のアニメーション */
+@keyframes scroll {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  51% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+}
+/* .arrow {
   margin: 16px auto;
   width: fit-content;
 }
@@ -240,7 +290,7 @@ header {
   background-color: #000000;
   transform: rotate(25deg);
   transform-origin: calc(100% - 0.5px) 50%;
-}
+} */
 
 /* about me */
 .aboutme_head {
