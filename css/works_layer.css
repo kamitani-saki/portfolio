@@ -17,6 +17,11 @@ header {
 .works_head {
   margin-top: 80px;
 }
+main {
+  background-image: url(../images/top_background_left-100.jpg);
+  background-repeat: no-repeat;
+  background-position: -500px 1800px;
+}
 h3 {
   margin-top: 250px;
   padding-bottom: 20px;

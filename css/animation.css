@@ -1,10 +1,10 @@
 @charset "utf-8";
-/* キャッチコピーの文字が浮き出る */
+/*===== キャッチコピーの文字が浮き出る ====*/
 .slideConts {
   opacity: 0;
 }
 .slide {
-  animation: slideAnime 1s ease forwards;
+  animation: slideAnime 3s ease forwards;
 }
 @keyframes slideAnime {
   from {
@@ -16,38 +16,13 @@
   }
 }
 .txt1 {
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
 }
 .txt2 {
-  animation-delay: 3s;
+  animation-delay: 1.5s;
 }
 .txt3 {
-  animation-delay: 4.5s;
-}
-
-/*========= LoadingのためのCSS ===============*/
-
-/* Loading背景画面設定　*/
-#splash {
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  background: #333;
-  text-align: center;
-  color: #fff;
-}
-
-/* Loading画像中央配置　*/
-#splash_logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Loading アイコンの大きさ設定　*/
-#splash_logo svg {
-  width: 300px;
+  animation-delay: 2.5s;
 }
 
 /*========= SVG操作手書き風にするためのCSS ===============*/
@@ -55,14 +30,16 @@
 #mask .st0 {
   fill: none;
   stroke: #fff;
-  stroke-width: 90; /*線の太さを指定する*/
+  stroke-width: 5; /*線の太さを指定する*/
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
   stroke-dasharray: 1500; /* 線の間隔を指定する */
   stroke-dashoffset: 1500; /* 線の位置を指定する */
+  transition-delay: 0s;
 }
 
+/* ====worksのスクロール線のアニメーション==== */
 /* スクロールダウンの位置 */
 .scroll {
   position: absolute;
@@ -102,27 +79,23 @@
   }
 }
 
-/* テキストナビゲーション */
+/* ======テキストナビゲーション ======*/
 .gnavi li a {
   /*線の基点とするためrelativeを指定*/
   position: relative;
-}
-.gnavi li.current a,
-.gnavi li a:hover {
-  /* color: #d48d95; */
 }
 .gnavi li a::after {
   content: "";
   /*絶対配置で線の位置を決める*/
   position: absolute;
-  bottom: 0;
-  left: 10%;
+  bottom: -10px;
+  left: -25%;
   /*線の形状*/
-  width: 80%;
-  height: 2px;
+  width: 150%;
+  height: 1px;
   background: #d48d95;
   /*アニメーションの指定*/
-  transition: all 0.3s;
+  transition: all 0.8s;
   transform: scale(0, 1); /*X方向0、Y方向1*/
   transform-origin: left top; /*左上基点*/
 }
@@ -130,4 +103,42 @@
 .gnavi li.current a::after,
 .gnavi li a:hover::after {
   transform: scale(1, 1); /*X方向にスケール拡大*/
+}
+
+/* =======contactボタン、ホバー時背景変化====== */
+/*背景の設定*/
+
+.contact_btn {
+  /*背景色の基点とするためrelativeを指定*/
+  position: relative;
+}
+
+.contact_btn::after {
+  content: "";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  /*背景の形状*/
+  width: 0;
+  height: 100%;
+  background: #d48d95;
+  border-radius: 19px;
+  /*アニメーションの指定*/
+  transition: all 0.5s;
+  opacity: 0; /*はじめは透過0*/
+}
+
+/*現在地とhoverの設定*/
+
+.contact_btn:hover::after {
+  /*背景の形状*/
+  width: 100%; /*横幅を伸ばす*/
+  opacity: 1; /*不透明に*/
+}
+
+.contact_btn:hover {
+  color: #fff;
+  border: none;
 }
