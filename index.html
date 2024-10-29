@@ -10,23 +10,24 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <title>kamitani saki</title>
+    <title>portfolio_KamitaniSaki</title>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="header_wrap">
             <h1 class="header_logo">
-                <a href="">
-                    <p>kamitani<br>saki<br>portfolio<br>site</p>
+                <a href="#header">
+                    <p>Kamitani<br>saki<br>portfolio<br>site</p>
                 </a>
             </h1>
             <nav class="header_menu">
                 <ul>
-                    <li><a href="">works</a></li>
-                    <li><a href="">about me</a></li>
-                    <a hre="">
+                    <li><a href="./works.html">works</a></li>
+                    <li><a href="./aboutme.html">about me</a></li>
+                    <a hre="#contact">
                         <li>contact</li>
                     </a>
                 </ul>
@@ -36,18 +37,31 @@
 
             <div class="top_wrap">
                 <div class="top_works">
-                    <a href="">
+                    <a href="./works.html">
                         <p class="top_works_button">works</p>
                         <img src="./images/button.svg" alt="ボタンアイコン">
                     </a>
                 </div>
                 <div class="catch_copy">
-                    <p class="catch_copy_main">「想い」を<br>つむいで、<br>丁寧に。</p>
+                    <div class="catch_copy_main">
+                        <p class="slideConts txt1">「想い」を</p><br>
+                        <p class="slideConts txt2">つむいで、</p><br>
+                        <p class="slideConts txt3">丁寧に。</p>
+                    </div>
                 </div>
             </div>
             <div class="top_background_line">
-                <img src="./images/pc_top_line1.svg" alt="流れる糸1">
+                <!-- <img src="./images/pc_top_line1.svg" alt="流れる糸1"> -->
+                <svg id="mask" data-name="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2150.54 855.15">
+                    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/pc_top_line1.svg" width="739"
+                        height="258.9" mask="url(#clipmask)"></image>
+                    <mask id="clipmask" maskUnits="objectBoundingBox">
+                        <path class="st0"
+                            d="M2147.58,2.68s-176.84,195.59-356.03,275.68c-180.56,80.7-208.89,90.87-331.73,114.24s-149.55,14.13-165.25,10.58-124.21-25.48-90.86-128.68c22.35-69.17,88.12-41.95,99.27-22.4s41.95,73.76-13.52,160.9-61.77,173.17,30.01,199.48,149.44-91.91,151.39-150.01c1.76-52.45-22.2-158.55-141.92-148.58s-165.14,119.56-247.94,226.37c-94.8,122.29-253.01,230.39-517.13,262.96-121.81,15.02-226.57,56.8-563.73,46.24" />
+                    </mask>
+                </svg>
             </div>
+
         </div>
     </header>
     <div class="main">
@@ -59,7 +73,7 @@
                 どうぞ、ご覧ください。</p>
         </section>
 
-        <section class="works">
+        <section id="works" class="works">
             <div class="works_background_line">
                 <img src="./images/pc_top_line2.svg" alt="流れる糸2">
             </div>
@@ -96,46 +110,52 @@
                         </div>
                         <p class="works_content_subtitle">design</p>
                     </div>
+                    <div class="works_content_style">
+                        <p class="works_content_title">バナー</p>
+                        <div class="works_img">
+                            <img src="./images/top_works4.jpg" alt="" class="works_center">
+                        </div>
+                        <p class="works_content_subtitle">design</p>
+                    </div>
                 </div>
-                <div class="works_line"></div>
-
-                <!-- <div class="arrow">
-                    <div class="arrow_left">
-                    </div>
-                    <div class="arrow_right">
-                    </div>
-                </div> -->
-
+                <div class="works_solid"></div>
             </div>
             <div class="scroll">
                 <span>Scroll</span>
             </div>
-            <div class="button">
-                <a href="">
-                    <p class="button_text">viwe more</p>
+            <div class="works_button">
+                <a href="./works.html">
+                    <p class="works_button_text">viwe more</p>
                     <img src="./images/button.svg" alt="ボタンアイコン">
                 </a>
             </div>
         </section>
-        <section class="aboutme center">
+        <section id="aboutme" class="aboutme center">
             <div class="aboutme_head">
                 <h2 class="title">about me</h2>
                 <p class="subtitle">私について</p>
             </div>
             <div class="aboutme_wrap">
-
-
                 <div class="aboutme_description">
                     <div class="aboutme_text_wrap">
                         <p class="aboutme_text">
                             笑うと顔がくしゃくしゃになります。<br>
                             可愛い娘が二人います。<br>
                             前職は管理栄養士でした。<br>
-                            好きなことは、整理整頓。<br></p>
-                        <p class="aboutme_text line_spacing">私のデザインが、</p>
-                        <p class="aboutme_text">「つながり」を感じる<br>人と人を結ぶ糸となれるよう</p>
-                        <p class="aboutme_text line_spacing">日々邁進中です。</p>
-                        <p class="aboutme_text">よろしくお願いします。
+                            好きなことは、整理整頓。
+                            <br>
+                            <br>
+                            私のデザインが、
+                            <br>
+                            <br>
+                            「つながり」を感じる<br>
+                            人と人を結ぶ糸となれるよう
+                            <br>
+                            <br>
+                            日々邁進中です。
+                            <br>
+                            <br>
+                            よろしくお願いします。
                         </p>
                     </div>
                 </div>
@@ -143,23 +163,21 @@
                     <img src="./images/top_aboutme-100.jpg" alt="">
                 </div>
             </div>
-            <div class="button">
-                <a href="">
-                    <p class="button_text">and more</p>
+            <div class="aboutme_button">
+                <a href="./aboutme.html">
+                    <p class="aboutme_button_text">and more</p>
                     <img src="./images/button.svg" alt="ボタンアイコン">
                 </a>
             </div>
 
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
 
             <div class="contact_head center">
                 <h2 class="title">contact</h2>
                 <p class="subtitle">お問い合せ</p>
             </div>
-            <!-- <div class="contact_background_line">
-                <img src="./images/pc_top_line3.svg" alt="流れる糸3">
-            </div> -->
+
             <form action="" class="center">
                 <p class="contact_description
                 ">お仕事のご依頼、ご相談などお気軽にお問い合わせください。</p>
@@ -190,16 +208,54 @@
 
         <div class="footer_menu">
             <ul>
-                <li><a href="">home</a></li>
-                <li><a href="">works</a></li>
-                <li><a href="">about</a></li>
-                <li><a href="">contact</a></li>
+                <li><a href="#header">home</a></li>
+                <li><a href="./works.html">works</a></li>
+                <li><a href="./aboutme.html">aboutme</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
         </div>
         <small>&copy; 2024 kamitani saki portfolio</small>
     </div>
+    <div class="pagetop active">
+        <a href="#header" id="page-top" class="=active">
+            <p>page top</p>
+        </a>
+    </div>
 
+    <script>
+        //SVGアニメーションの描画
+        var stroke;
+        stroke = new Vivus('mask', {//アニメーションをするIDの指定
+            start: 'manual',//自動再生をせずスタートをマニュアルに
+            type: 'scenario-sync',// アニメーションのタイプを設定
+            duration: 50,//アニメーションの時間設定。数字が小さくなるほど速い
+            forceRender: false,//パスが更新された場合に再レンダリングさせない
+            animTimingFunction: Vivus.EASE,//動きの加速減速設定
+        }
+        );
 
+        $(window).on('load', function () {
+            $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
+            $("#splash_logo").delay(1500).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
+            stroke.play();//SVGアニメーションの実行
+        });
+        function BlurTextAnimeControl() {
+            $('.slideConts').each(function () {
+                var elemPos = $(this).offset().top - 50;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll >= elemPos - windowHeight) {
+                    $(this).addClass('slide');
+                } else {
+                    $(this).removeClass('slide');
+                }
+            });
+        }
+        $(window).on('load', function () {
+            BlurTextAnimeControl();
+        });
+
+    </script>
 </body>
 
 </html>
