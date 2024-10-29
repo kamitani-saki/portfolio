@@ -110,6 +110,10 @@ header {
   font-size: 16px;
   width: 460px;
 }
+.strongs {
+  position: relative;
+  z-index: 100;
+}
 .skill_icon {
   display: flex;
   gap: 13px;
@@ -182,6 +186,7 @@ header {
 .aboutme_background_line1,
 .aboutme_background_line2 {
   position: relative;
+  z-index: 1;
 }
 .aboutme_background_line1 img {
   position: absolute;
