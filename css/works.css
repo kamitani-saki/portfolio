@@ -12,8 +12,7 @@ header {
   height: auto;
 }
 .header_works {
-  text-decoration: underline;
-  text-decoration-color: #d48d95;
+  border-bottom: 1px solid #d48d95;
 }
 .works_head {
   margin-top: 80px;

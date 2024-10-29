@@ -15,8 +15,7 @@ header {
   height: auto;
 }
 .header_aboutme {
-  text-decoration: underline;
-  text-decoration-color: #d48d95;
+  border-bottom: 1px solid #d48d95;
 }
 .aboutme_head {
   margin-top: 80px;
@@ -124,6 +123,7 @@ header {
   margin-bottom: 160px;
 }
 .strong_content {
+  padding-left: 24px;
   display: flex;
   gap: 80px;
   margin-bottom: 180px;

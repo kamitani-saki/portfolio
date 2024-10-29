@@ -1,0 +1,132 @@
+@charset "utf-8";
+.slideConts {
+  opacity: 0;
+}
+.slide {
+  animation: slideAnime 1s ease forwards;
+}
+@keyframes slideAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.txt1 {
+  animation-delay: 1.5s;
+}
+.txt2 {
+  animation-delay: 3s;
+}
+.txt3 {
+  animation-delay: 4.5s;
+}
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+#splash {
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #333;
+  text-align: center;
+  color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo svg {
+  width: 300px;
+}
+
+/*========= SVG操作手書き風にするためのCSS ===============*/
+
+#mask .st0 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 90; /*線の太さを指定する*/
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1500; /* 線の間隔を指定する */
+  stroke-dashoffset: 1500; /* 線の位置を指定する */
+}
+
+/* スクロールダウンの位置 */
+.scroll {
+  position: absolute;
+  right: 50%;
+  margin-top: 55px;
+}
+/* 線のアニメーション部分 */
+.scroll::before {
+  animation: scroll 2s infinite;
+  background-color: #000;
+  bottom: 7px;
+  content: "";
+  height: 1px;
+  left: 60px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 100px;
+  z-index: 2;
+}
+/* 線の背景色 */
+.scroll::after {
+  background-color: #ccc;
+  bottom: 7px;
+  content: "";
+  height: 1px;
+  left: 60px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 100px;
+}
+/* 線のアニメーション */
+@keyframes scroll {
+  0% {
+    width: 0px;
+  }
+}
+
+/* テキストナビゲーション */
+.gnavi li a {
+  /*線の基点とするためrelativeを指定*/
+  position: relative;
+}
+.gnavi li.current a,
+.gnavi li a:hover {
+  /* color: #d48d95; */
+}
+.gnavi li a::after {
+  content: "";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  /*線の形状*/
+  width: 80%;
+  height: 2px;
+  background: #d48d95;
+  /*アニメーションの指定*/
+  transition: all 0.3s;
+  transform: scale(0, 1); /*X方向0、Y方向1*/
+  transform-origin: left top; /*左上基点*/
+}
+/*現在地とhoverの設定*/
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+  transform: scale(1, 1); /*X方向にスケール拡大*/
+}
