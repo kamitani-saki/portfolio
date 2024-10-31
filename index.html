@@ -8,233 +8,284 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/animation.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <title>portfolio_KamitaniSaki</title>
 </head>
 
 <body>
-    <header id="header">
-        <div class="header_wrap">
-            <h1 class="header_logo">
-                <a href="#header">
-                    <p>Kamitani<br>saki<br>portfolio<br>site</p>
-                </a>
-            </h1>
-            <nav class="header_menu">
-                <ul class="">
-                    <li><a href="./works.html">works</a></li>
-                    <li><a href="./aboutme.html">about me</a></li>
-                    <a href="#contact" class="contact_btn">
-                        <li>
-                            <span>contact</span>
-                        </li>
+    <!-- <div id="splash">
+        <div id="splash_logo">
+            <svg id="mask" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="2150.75" height="847.61" viewBox="0 0 2150.75 847.61"
+                style="enable-background:new 0 0 2150.75 847.61;" xml:space="preserve">
+                <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/SVG/text.svg" width="2150.75"
+                    height="847.61" mask="url(#clipmask)"></image>
+                <mask id="clipmask" maskUnits="objectBoundingBox">
+                    <path data-delay="0" class="st0"
+                        d="M2215.46,14.07c-110.04,111.21-235.2,208.49-374.75,279.22s-293.85,114.45-450.26,117.95c-22.24.5-45.33,0-65.4-9.57-31.44-15-49.86-53.16-42.05-87.11s6.56-67.78,75.88-59.99c47.77,10.78,27.73,80.23,18.38,120.92-12.75,55.46-53.96,107.46-41.83,163.07,12.15,55.68,81.26,87.51,134.81,67.98,53.54-19.52,85.88-79.87,81.73-136.71s-39.8-108.26-86.34-141.15c-28.21-19.94-62.2-20.83-94.67-9.06-38.36,13.89-58.57,44.08-89.79,70.35-15.33,12.89-26.98,31.94-40.15,47.02-53.75,61.53-99.71,134.85-156.23,188.8-82.42,78.67-175.96,106.66-272.41,143.42-45.75,17.43-93.49,23.38-141.15,34.59-34.83,8.2-70.36,13-105.87,17.35-187.46,23-376.39,34.07-565.25,33.12" />
+                </mask>
+            </svg>
+        </div> -->
+    <!--/splash-->
+    <!-- </div> -->
+    <div id="container">
+        <header id="header">
+            <div class="header_wrap">
+                <h1 class="header_logo">
+                    <a href="#header">
+                        <p class="pc_logo">Kamitani<br>saki<br>portfolio<br>site</p>
+                        <p class="sp_logo">Kamitani saki<br>portfolio<br>site</p>
                     </a>
-                </ul>
-            </nav>
-        </div>
-        <div class="first_view">
+                </h1>
+                <nav class="pc_header_menu">
+                    <ul class="gnavi">
+                        <li><a href="./works.html">works</a></li>
+                        <li><a href="./aboutme.html">about me</a></li>
+                        <li> <a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+                <div class="sp_btn">
+                    <div class="sp_btn_line">
+                        <span></span>
+                    </div>
+                </div>
+                <nav class="sp_header_menu">
+                    <ul>
+                        <li><a href="./works.html">works</a></li>
+                        <li><a href="./aboutme.html">about me</a></li>
+                        <li> <a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="first_view">
 
-            <div class="top_wrap">
-                <div class="top_works">
+                <div class="top_wrap">
+                    <div class="top_works">
+                        <a href="./works.html">
+                            <p class="top_works_button">works</p>
+                            <img src="./images/button.svg" alt="ボタンアイコン">
+                        </a>
+                    </div>
+                    <div class="top_background_line">
+                        <!-- <img src="./images/pc_top_line1.svg" alt="流れる糸1"> -->
+
+                        <svg id="mask" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="2150.75" height="847.61"
+                            viewBox="0 0 2150.75 847.61" style="enable-background:new 0 0 2150.75 847.61;"
+                            xml:space="preserve">
+                            <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/SVG/text.svg"
+                                width="2150.75" height="847.61" mask="url(#clipmask)"></image>
+                            <mask id="clipmask" maskUnits="objectBoundingBox">
+                                <path data-delay="0" class="st0"
+                                    d="M2148.74,1.22c-73.63,75.39-108.72,113.73-188.42,172.38-56.63,41.67-118.05,80.18-184.49,112.98-189.59,93.63-394,124.13-455.38,119.78-22.39-2.33-50.47-8-66.92-17.36-42.55-20.29-57.35-49.39-55.27-87.17.99-38.72,39.29-95.35,90.85-62.65,18.91,11.99,25.02,29.15,28.56,46.84,6.11,30.53-1.32,63.33-6.21,78.87-17.89,51.02-65.84,110.92-61.35,166.49,6.63,88.94,108.42,97.33,150.72,63.29,48.76-30.35,70.82-94.98,68.88-153.72-4.17-56.84-25.27-98.82-74.69-120.3-31.75-13.8-66.9-13.08-99.49-1.31-46.08,14.32-58.5,25.19-89.77,53.77-17.83,13.35-45,52.76-58.23,67.84-58.43,87.13-76.83,117.03-133.55,170.98-82.72,78.67-172.77,121.48-271.31,152.75-57.24,16.99-101.14,25.19-143.32,32.14s-117.87,20.68-153.51,25.03C254.84,848.31,189.55,849.14,0,848.19" />
+
+                            </mask>
+                        </svg>
+
+                    </div>
+                    <div class="catch_copy">
+                        <div class="catch_copy_main">
+                            <p class="slideConts txt1">「想い」を</p><br>
+                            <p class="slideConts txt2">つむいで、</p><br>
+                            <p class="slideConts txt3">丁寧に。</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </header>
+        <div class="main">
+            <section class="concept center fadein fadein-bottom">
+                <div class="scroll1">
+                    <span></span>
+                </div>
+                <p class="concept_text">一本一本の糸が、大きな布になるように<br>
+                    大切な「想い」を一つ一つ紡いで、デザインを織りなしていきます。<br>
+                    相手に寄り添ったデザインを<br>
+                    心を込めて、丁寧に制作いたします。<br>
+                    どうぞ、ご覧ください。
+
+                </p>
+            </section>
+            <section id="works" class="works fadein fadein-bottom">
+                <div class="works_background_line">
+                    <img src="./images/pc_top_line2.svg" alt="流れる糸2">
+                </div>
+                <div class="woks_all">
+                    <div class="works_head">
+                        <h2 class="title">works</h2>
+                        <p class="subtitle">制作実績</p>
+                    </div>
+                    <div class="works_content">
+                        <div class="works_slider">
+                            <div class="works_content_style">
+                                <p class="works_content_title">コーポレートサイト
+                                </p>
+                                <div class="works_img"><img src="./images/top_works1.jpg" alt="" class="works_center">
+                                </div>
+                                <p class="works_content_subtitle">design/coding</p>
+                            </div>
+                            <div class="works_content_style">
+                                <p class="works_content_title">コーポレートサイト</p>
+                                <div class="works_img">
+                                    <img src="./images/top_works2.jpg" alt="" class="works_center">
+                                </div>
+                                <p class="works_content_subtitle">coding</p>
+                            </div>
+                            <div class="works_content_style">
+                                <p class="works_content_title">バナー</p>
+                                <div class="works_img">
+                                    <img src="./images/top_works3.jpg" alt="" class="works_center">
+                                </div>
+                                <p class="works_content_subtitle">design</p>
+                            </div>
+                            <div class="works_content_style">
+                                <p class="works_content_title">バナー</p>
+                                <div class="works_img">
+                                    <img src="./images/top_works4.jpg" alt="" class="works_center">
+                                </div>
+                                <p class="works_content_subtitle">design</p>
+                            </div>
+                            <div class="works_content_style">
+                                <p class="works_content_title">バナー</p>
+                                <div class="works_img">
+                                    <img src="./images/top_works4.jpg" alt="" class="works_center">
+                                </div>
+                                <p class="works_content_subtitle">design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works_solid"></div>
+                </div>
+                <div class="scroll">
+                    <span>Scroll</span>
+                </div>
+                <div class="works_button">
                     <a href="./works.html">
-                        <p class="top_works_button">works</p>
+                        <p class="works_button_text">viwe more</p>
                         <img src="./images/button.svg" alt="ボタンアイコン">
                     </a>
                 </div>
-                <div class="catch_copy">
-                    <div class="catch_copy_main">
-                        <p class="slideConts txt1">「想い」を</p><br>
-                        <p class="slideConts txt2">つむいで、</p><br>
-                        <p class="slideConts txt3">丁寧に。</p>
-                    </div>
+            </section>
+            <section id="aboutme" class="aboutme center fadein fadein-bottom">
+                <div class="aboutme_head">
+                    <h2 class="title">about me</h2>
+                    <p class="subtitle">私について</p>
                 </div>
-            </div>
-            <div class="top_background_line">
-                <!-- <img src="./images/pc_top_line1.svg" alt="流れる糸1"> -->
-                <svg id="mask" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="2150.75" height="847.61"
-                    viewBox="0 0 2150.75 847.61" style="enable-background:new 0 0 2150.75 847.61;" xml:space="preserve">
-                    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/SVG/text.svg" width="2150.75"
-                        height="847.61" mask="url(#clipmask)"></image>
-                    <mask id="clipmask" maskUnits="objectBoundingBox">
-                        <path data-delay="0" class="st0"
-                            d="M0,847.61l46.54-.71,79.3-.66,47.56-.77,39.3-1.11c17.96-.9,44.92-2.43,77.57-5.01,272.4-28.84,467.05-65.13,573.62-122.5,41.81-19.52,77-43.15,112.19-70.82,77.12-62.62,113.26-113.38,161.72-186.49,35.47-53.72,79.27-109.48,141.96-136.07,19.76-8.38,39.74-11.31,42.13-11.65,15.62-2.21,48.88-6.46,82.73,10.56,0,0,16.25,7.51,29.06,19.85,52.1,49.61,52.4,156.7,3.13,221.14-4.31,4.77-28.79,43.29-86.42,47.54-.55.02-2.75.22-5.79.14-7.52.39-48.81-2.12-73.91-32.42-2.43-2.47-10.39-12.47-15.04-28.83-7.97-30.85.85-59.22,11.49-85.58,39.98-86.19,52.38-92.87,56.03-142.03.76-8.6,4.54-61.73-33.29-85.68-5.13-3.25-19.48-10.66-36.42-8.07-41.55,6.34-67.74,72.38-41.51,120.43,25.74,44.19,91.59,59.16,136.4,57.46,175.29-15.39,297.55-66.06,321.03-73.2C1941.52,215.55,1987.16,164.75,2150.75,0" />
-                    </mask>
-                </svg>
-
-            </div>
-
-        </div>
-    </header>
-    <div class="main">
-        <section class="concept center">
-            <p class="concept_text">一本一本の糸が、大きな布になるように<br>
-                大切な「想い」を一つ一つ紡いで、デザインを織りなしていきます。<br>
-                相手に寄り添ったデザインを<br>
-                心を込めて、丁寧に制作いたします。<br>
-                どうぞ、ご覧ください。</p>
-        </section>
-
-        <section id="works" class="works">
-            <div class="works_background_line">
-                <img src="./images/pc_top_line2.svg" alt="流れる糸2">
-            </div>
-            <div class="woks_all">
-                <div class="works_head">
-                    <h2 class="title">works</h2>
-                    <p class="subtitle">制作実績</p>
-                </div>
-                <div class="works_content">
-                    <div class="works_content_style">
-                        <p class="works_content_title">コーポレートサイト
-                        </p>
-                        <div class="works_img"><img src="./images/top_works1.jpg" alt="" class="works_center"></div>
-                        <p class="works_content_subtitle">design/coding</p>
-                    </div>
-                    <div class="works_content_style">
-                        <p class="works_content_title">コーポレートサイト</p>
-                        <div class="works_img">
-                            <img src="./images/top_works2.jpg" alt="" class="works_center">
+                <div class="aboutme_wrap">
+                    <div class="aboutme_description">
+                        <div class="aboutme_text_wrap">
+                            <p class="aboutme_text">
+                                笑うと顔がくしゃくしゃになります。<br>
+                                可愛い娘が二人います。<br>
+                                前職は管理栄養士でした。<br>
+                                好きなことは、整理整頓。
+                                <br>
+                                <br>
+                                私のデザインが、
+                                <br>
+                                <br>
+                                「つながり」を感じる<br>
+                                人と人を結ぶ糸となれるよう
+                                <br>
+                                <br>
+                                日々邁進中です。
+                                <br>
+                                <br>
+                                よろしくお願いします。
+                            </p>
                         </div>
-                        <p class="works_content_subtitle">coding</p>
                     </div>
-                    <div class="works_content_style">
-                        <p class="works_content_title">バナー</p>
-                        <div class="works_img">
-                            <img src="./images/top_works3.jpg" alt="" class="works_center">
-                        </div>
-                        <p class="works_content_subtitle">design</p>
-                    </div>
-                    <div class="works_content_style">
-                        <p class="works_content_title">バナー</p>
-                        <div class="works_img">
-                            <img src="./images/top_works4.jpg" alt="" class="works_center">
-                        </div>
-                        <p class="works_content_subtitle">design</p>
-                    </div>
-                    <div class="works_content_style">
-                        <p class="works_content_title">バナー</p>
-                        <div class="works_img">
-                            <img src="./images/top_works4.jpg" alt="" class="works_center">
-                        </div>
-                        <p class="works_content_subtitle">design</p>
+                    <div class="aboutme_photo">
+                        <img src="./images/top_aboutme-100.jpg" alt="">
                     </div>
                 </div>
-                <div class="works_solid"></div>
-            </div>
-            <div class="scroll">
-                <span>Scroll</span>
-            </div>
-            <div class="works_button">
-                <a href="./works.html">
-                    <p class="works_button_text">viwe more</p>
-                    <img src="./images/button.svg" alt="ボタンアイコン">
-                </a>
-            </div>
-        </section>
-        <section id="aboutme" class="aboutme center">
-            <div class="aboutme_head">
-                <h2 class="title">about me</h2>
-                <p class="subtitle">私について</p>
-            </div>
-            <div class="aboutme_wrap">
-                <div class="aboutme_description">
-                    <div class="aboutme_text_wrap">
-                        <p class="aboutme_text">
-                            笑うと顔がくしゃくしゃになります。<br>
-                            可愛い娘が二人います。<br>
-                            前職は管理栄養士でした。<br>
-                            好きなことは、整理整頓。
-                            <br>
-                            <br>
-                            私のデザインが、
-                            <br>
-                            <br>
-                            「つながり」を感じる<br>
-                            人と人を結ぶ糸となれるよう
-                            <br>
-                            <br>
-                            日々邁進中です。
-                            <br>
-                            <br>
-                            よろしくお願いします。
-                        </p>
-                    </div>
+                <div class="aboutme_button">
+                    <a href="./aboutme.html">
+                        <p class="aboutme_button_text">and more</p>
+                        <img src="./images/button.svg" alt="ボタンアイコン">
+                    </a>
                 </div>
-                <div class="aboutme_photo">
-                    <img src="./images/top_aboutme-100.jpg" alt="">
+
+            </section>
+            <section id="contact" class="contact fadein fadein-bottom">
+
+                <div class="contact_head center">
+                    <h2 class="title">contact</h2>
+                    <p class="subtitle">お問い合せ</p>
                 </div>
-            </div>
-            <div class="aboutme_button">
-                <a href="./aboutme.html">
-                    <p class="aboutme_button_text">and more</p>
-                    <img src="./images/button.svg" alt="ボタンアイコン">
-                </a>
-            </div>
 
-        </section>
-        <section id="contact" class="contact">
-
-            <div class="contact_head center">
-                <h2 class="title">contact</h2>
-                <p class="subtitle">お問い合せ</p>
-            </div>
-
-            <form action="" class="center">
-                <p class="contact_description
+                <form action="" class="center">
+                    <p class="contact_description
                 ">お仕事のご依頼、ご相談などお気軽にお問い合わせください。</p>
-                <div class="contact_wrap">
-                    <label for="name">お名前</label>
-                    <div class="fullname">
-                        <input type="text" id="sei">
-                        <input type="text" id="mei">
+                    <div class="contact_wrap">
+                        <label for="name">お名前</label>
+                        <div class="fullname">
+                            <input type="text" id="sei">
+                            <input type="text" id="mei">
+                        </div>
+
+                        <label for="furigana">フリガナ</label>
+                        <input type="furigana" id="フリガナ">
+                        <label for="phone">電話番号</label>
+                        <input type="phone" id="phone">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="amail">
+
+                        <label for="message">お問い合せ内容</label>
+                        <textarea name="" id="message"></textarea>
+
+                        <button class="btn" type="submit">送信する</button>
                     </div>
+                </form>
 
-                    <label for="furigana">フリガナ</label>
-                    <input type="furigana" id="フリガナ">
-                    <label for="phone">電話番号</label>
-                    <input type="phone" id="phone">
-                    <label for="email">メールアドレス</label>
-                    <input type="email" id="amail">
-
-                    <label for="message">お問い合せ内容</label>
-                    <textarea name="" id="message"></textarea>
-
-                    <button class="btn" type="submit">送信する</button>
-                </div>
-            </form>
-
-        </section>
-    </div>
-    <div id="footer">
-
-        <div class="footer_menu">
-            <ul>
-                <li><a href="#header">home</a></li>
-                <li><a href="./works.html">works</a></li>
-                <li><a href="./aboutme.html">aboutme</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
+            </section>
         </div>
-        <small>&copy; 2024 kamitani saki portfolio</small>
-    </div>
-    <div class="pagetop active">
-        <a href="#header" id="page-top" class="=active">
-            <p>page top</p>
-        </a>
+        <div id="footer">
+
+            <div class="footer_menu">
+                <ul>
+                    <li><a href="#header">home</a></li>
+                    <li><a href="./works.html">works</a></li>
+                    <li><a href="./aboutme.html">aboutme</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </div>
+            <small>&copy; 2024 kamitani saki portfolio</small>
+        </div>
+        <div class="pagetop active">
+            <a href="#header" id="page-top" class="=active">
+                <p>page top</p>
+            </a>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
     <script>
+        //===== sp版のぼたん
+        $(function () {
+            // sp_btnがクリックされたとき
+            $('.sp_btn').on('click', function () {
+                // .sp_btnを.openに切り替える
+                $('.sp_btn').toggleClass('open');
+                // 消えている.sp_navを表示させる
+                $('.sp_header_menu').fadeToggle();
+                $('.sp_logo').fadeToggle();
+            })
+        })
         //======SVGアニメーションの描画
         var stroke;
         stroke = new Vivus('mask', {//アニメーションをするIDの指定
             start: 'manual',//自動再生をせずスタートをマニュアルに
             type: 'scenario-sync',// アニメーションのタイプを設定
-            duration: 600,//アニメーションの時間設定。数字が小さくなるほど速い
+            duration: 1000,//アニメーションの時間設定。数字が小さくなるほど速い
             forceRender: false,//パスが更新された場合に再レンダリングさせない
             animTimingFunction: Vivus.EASE,//動きの加速減速設定
         }
@@ -262,6 +313,55 @@
             BlurTextAnimeControl();
         });
 
+        // ======スクロールしたら下からふわっと
+        $(window).scroll(function () {
+            $('.fadein').each(function () {
+                var elemPos = $(this).offset().top,
+                    scroll = $(window).scrollTop(),
+                    windowHeight = $(window).height();
+
+                if (scroll > elemPos - windowHeight + 150) {
+                    $(this).addClass('scrollin');
+                }
+            });
+        });
+
+        //===== worksスライダー
+        $(function () {
+            $('.works_slider').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                infinite: true,
+                // autoplay: true,
+                // autoplaySpeed: 3000,
+                dots: false,
+                arrows: false
+            });
+        });
+
+        // ========スクロールしたら現れるtoppageボタン
+        //pagetop
+        $(function () {
+            var topBtn = $('.pagetop');
+            topBtn.hide();
+            //スクロールが100に達したらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 600) {
+                    //ボタンの表示方法
+                    topBtn.fadeIn();
+                } else {
+                    //ボタンの非表示方法
+                    topBtn.fadeOut();
+                }
+            });
+            //スクロールしてトップ
+            topBtn.click(function () {
+                $('body,  html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+        });
     </script>
 </body>
 

@@ -28,7 +28,7 @@ html {
   display: flex;
   align-items: center;
   gap: 12px;
-  z-index: 200;
+  z-index: 150;
 }
 .works_button_text,
 .aboutme_button_text,
@@ -50,6 +50,19 @@ body {
   overflow-x: hidden;
 }
 
+.fadein {
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: all 3s;
+  &.fadein-bottom {
+    transform: translate(0, 30px);
+  }
+  &.scrollin {
+    opacity: 1 !important;
+    transform: translate(0, 0) !important;
+  }
+}
+
 /* ヘッダー */
 header {
   background-image: url(../images/top_background1-100.jpg);
@@ -68,19 +81,20 @@ header {
   box-sizing: border-box;
 }
 .header_logo {
+  z-index: 200;
+  font-size: 20px;
+}
+.pc_header_menu {
   z-index: 150;
 }
-.header_menu {
-  z-index: 150;
-}
-.header_menu ul {
+.pc_header_menu ul {
   display: flex;
   gap: 60px;
 }
-.header_menu ul li {
+.pc_header_menu ul li {
   padding: 10px 20px;
 }
-.header_menu ul li:last-child {
+.pc_header_menu ul li:last-child {
   border-radius: 19px;
   border: solid 1px;
 }
@@ -101,6 +115,8 @@ header {
   margin-right: auto;
   width: 1160px;
   z-index: 150;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .top_works a {
   display: block;
@@ -150,6 +166,12 @@ header {
 }
 
 /* コンセプト */
+.concept {
+  display: flex;
+  gap: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .concept_text {
   line-height: 2.91;
 }
@@ -168,13 +190,24 @@ header {
   width: fit-content;
   align-items: center;
 }
-.works_content {
+.works_slider {
   display: flex;
   max-width: 100%;
   margin: 0 0 0 auto;
   gap: 53px;
   margin-top: 145px;
+  overflow-x: scroll;
+  /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+  -ms-overflow-style: none;
+  /*Firefoxへの対応*/
+  scrollbar-width: none;
 }
+
+/*Google Chrome、Safariへの対応*/
+.contents_box::-webkit-scrollbar {
+  display: none;
+}
+
 .works_content_style {
   width: 350px;
   height: 520px;
@@ -213,6 +246,10 @@ header {
 }
 
 /* about me */
+.aboutme {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .aboutme_head {
   display: flex;
   flex-direction: column;
@@ -270,6 +307,10 @@ header {
   margin-top: 225px;
   align-items: center;
   width: fit-content;
+}
+form {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .contact_description {
   width: fit-content;
@@ -388,5 +429,136 @@ small {
 #page-top p {
   margin-bottom: 6px;
 }
-.active {
+/* スマホ版メニュー 非表示にする*/
+.sp_btn,
+.sp_header_menu,
+.sp_logo {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  /* ナビ */
+  /* PC版メニュー 非表示にする*/
+  .pc_header_menu {
+    display: none;
+  }
+  .sp_btn {
+    /* pc版で非表示（display:none）にした要素を表示させるため、 display:blockを入れる。*/
+    display: block;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    border: 1px solid #555555;
+    cursor: pointer;
+    /* 画面を基準にして.sp_btnの位置を移動させる。 */
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 300;
+  }
+  .sp_btn_line span {
+    /* spanタグはインライン要素で横幅の指定はできないため、display:blockを入れる。 */
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: #555555;
+
+    /* 基準の線を真ん中に持ってくる。今いる場所（sp_btnの一番上）から10px下へ。 */
+    position: relative;
+    top: 23px;
+    left: 12px;
+    /* 何秒かけて変化させるか。（０.3秒） */
+    transition: 0.3s;
+  }
+  .sp_btn_line span::before,
+  .sp_btn_line span::after {
+    /* contentとは、要素の前後に文字や画像を挿入するもの。今回は線を引きたいだけなのでなにも入力しない*/
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: #555555;
+
+    /* spanタグの真ん中の線を基準として(spanが親要素になる)、beforeとafterを動かす。（beforeとafterが子要素） */
+    position: absolute;
+    transition: 0.3s;
+  }
+  .sp_btn_line span::before {
+    /* 真ん中の線を基準として下から上へ。bottom */
+    bottom: 10px;
+  }
+  .sp_btn_line span::after {
+    /* 真ん中を基準として上から下へ。top */
+    top: 10px;
+  }
+  /* ボタンををした後のロゴカラー */
+  .header_logo.open {
+    color: #fff;
+  }
+  /* ばつ印 */
+  .sp_btn.open {
+    border-color: #fff;
+  }
+  /* sp_btnかつ.open(jQuery)がついている時のspan */
+  .sp_btn.open span {
+    /* 2本線でばつ印にするため、真ん中の線を一本消す。 
+    非表示にするのではなく、背景色を透明にする。*/
+    background: transparent;
+  }
+  .sp_btn.open span::before {
+    /* 真ん中を基準に線を回転させるため、上にある線を真ん中に持ってくる */
+    bottom: 0;
+    /* 45度回転する */
+    transform: rotate(45deg);
+    background: #fff;
+  }
+  .sp_btn.open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    background: #fff;
+  }
+  /* メニュー */
+  /* 画面に覆い重なるように表示させる。 */
+  .sp_header_menu {
+    /* sp_navを画面の左上に持ってくる */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 幅と高さの指定*/
+    width: 100%;
+    /* height:100％だと sp_navの親要素（header）の高さいっぱいの大きさになってしまう。
+    そのため100vhにすることで、画面全体に覆い重なるように表示する。（ビューハイト：今開いているブラウザの高さ）*/
+    height: 100vh;
+    background: rgba(212, 141, 149, 0.8);
+    z-index: 170;
+  }
+
+  .sp_logo {
+    font-size: 26px;
+    color: #ffffff;
+    position: absolute;
+    top: 18px;
+    left: 47px;
+    z-index: 170;
+  }
+  .sp_header_menu ul {
+    /* 上下中央揃えを簡単にするため。縦並び→横並び（flex）→縦並び（flex-direction:column）にする。 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* ulの高さを親要素（.sp_nav）の高さに合わせる。 */
+    height: 100%;
+    gap: 50px;
+  }
+  .sp_header_menu ul li {
+    color: #fff;
+    font-size: 18px;
+    /* control +F で検索窓を出して、「游ゴシック」入れるとすぐ出てくる。コピペ。*/
+    font-family: "Zen Kaku Gothic New", "游ゴシック体", YuGothic, "游ゴシック",
+    "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    sans-serif;
+}
+
+@media screen and (max-width: 767px) {
 }

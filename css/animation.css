@@ -27,16 +27,91 @@
 
 /*========= SVG操作手書き風にするためのCSS ===============*/
 
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: white;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 55%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo svg {
+  width: 2500px;
+}
 #mask .st0 {
   fill: none;
   stroke: #fff;
-  stroke-width: 5; /*線の太さを指定する*/
+  stroke-width: 4.5; /*線の太さを指定する*/
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
   stroke-dasharray: 1500; /* 線の間隔を指定する */
   stroke-dashoffset: 1500; /* 線の位置を指定する */
   transition-delay: 0s;
+}
+/* =========conceptの横の線 */
+/* スクロールダウンの位置 */
+.scroll1 {
+  width: 1px;
+  height: 230px;
+}
+/* 線のアニメーション部分 */
+.scroll1::before {
+  display: block;
+  animation: scroll1 4s infinite;
+  background-color: #9b9696;
+
+  content: "";
+  height: 230px;
+
+  margin: auto;
+
+  width: 1px;
+  z-index: 2;
+}
+/* 線の背景色 */
+.scroll1::after {
+  display: block;
+  background-color: #ccc;
+
+  content: "";
+  height: 230px;
+
+  margin-top: -230px;
+
+  width: 1px;
+}
+/* 線のアニメーション */
+@keyframes scroll1 {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  51% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
 }
 
 /* ====worksのスクロール線のアニメーション==== */
@@ -79,12 +154,12 @@
   }
 }
 
-/* ======テキストナビゲーション ======*/
-.gnavi li a {
+/* ======テキストナビゲーション ====== */
+.gnavi li:not(:last-child) a {
   /*線の基点とするためrelativeを指定*/
   position: relative;
 }
-.gnavi li a::after {
+.gnavi li:not(:last-child) a::after {
   content: "";
   /*絶対配置で線の位置を決める*/
   position: absolute;
@@ -101,19 +176,29 @@
 }
 /*現在地とhoverの設定*/
 .gnavi li.current a::after,
-.gnavi li a:hover::after {
+.gnavi li:not(:last-child) a:hover::after {
   transform: scale(1, 1); /*X方向にスケール拡大*/
 }
+*/
 
-/* =======contactボタン、ホバー時背景変化====== */
+/*==================================================
+共通　横並びのための設定
+===================================*/
+
+.gnavi li a {
+  display: block;
+}
+
+/*==================================================
+　5-3-5 左から右に背景が伸びる
+===================================*/
+
 /*背景の設定*/
-
-.contact_btn {
+.gnavi li:last-child a {
   /*背景色の基点とするためrelativeを指定*/
   position: relative;
 }
-
-.contact_btn::after {
+.gnavi li:last-child a::after {
   content: "";
   /*絶対配置で線の位置を決める*/
   position: absolute;
@@ -124,21 +209,17 @@
   width: 0;
   height: 100%;
   background: #d48d95;
-  border-radius: 19px;
   /*アニメーションの指定*/
   transition: all 0.5s;
   opacity: 0; /*はじめは透過0*/
 }
 
 /*現在地とhoverの設定*/
-
-.contact_btn:hover::after {
+.gnavi li:last-child a:hover::after {
   /*背景の形状*/
   width: 100%; /*横幅を伸ばす*/
   opacity: 1; /*不透明に*/
 }
-
-.contact_btn:hover {
+.gnavi li:last-child a:hover {
   color: #fff;
-  border: none;
 }
