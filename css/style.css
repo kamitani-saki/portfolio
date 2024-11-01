@@ -456,6 +456,7 @@ small {
     right: 25px;
     z-index: 300;
   }
+
   .sp_btn_line span {
     /* spanタグはインライン要素で横幅の指定はできないため、display:blockを入れる。 */
     display: block;
@@ -532,7 +533,9 @@ small {
     background: rgba(212, 141, 149, 0.8);
     z-index: 170;
   }
-
+  .sp_btn.open .pc_logo {
+    display: none;
+  }
   .sp_logo {
     font-size: 26px;
     color: #ffffff;
@@ -554,11 +557,35 @@ small {
   .sp_header_menu ul li {
     color: #fff;
     font-size: 18px;
-    /* control +F で検索窓を出して、「游ゴシック」入れるとすぐ出てくる。コピペ。*/
     font-family: "Zen Kaku Gothic New", "游ゴシック体", YuGothic, "游ゴシック",
-    "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
-    sans-serif;
+      "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+      sans-serif;
+  }
+  .sp_h_sns_icon {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  .sp_h_sns_icon img {
+    width: 22px;
+  }
+  .top_works {
+    bottom: 5%;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .catch_copy {
+    width: auto;
+    right: 70px;
+  }
+  .catch_copy_main {
+    font-size: 60px;
+  }
+  .top_wrap {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
-
 @media screen and (max-width: 767px) {
 }
