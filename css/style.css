@@ -439,7 +439,8 @@ small {
 @media screen and (max-width: 1200px) {
   /* ナビ */
   /* PC版メニュー 非表示にする*/
-  .pc_header_menu {
+  .pc_header_menu,
+  .pc_logo {
     display: none;
   }
   .sp_btn {
@@ -456,7 +457,6 @@ small {
     right: 25px;
     z-index: 300;
   }
-
   .sp_btn_line span {
     /* spanタグはインライン要素で横幅の指定はできないため、display:blockを入れる。 */
     display: block;
@@ -493,9 +493,9 @@ small {
     top: 10px;
   }
   /* ボタンををした後のロゴカラー */
-  .header_logo.open {
+  /* .sp_btn.open .sp_logo {
     color: #fff;
-  }
+  } */
   /* ばつ印 */
   .sp_btn.open {
     border-color: #fff;
@@ -537,8 +537,9 @@ small {
     display: none;
   }
   .sp_logo {
+    display: block;
     font-size: 26px;
-    color: #ffffff;
+    color: #000000;
     position: absolute;
     top: 18px;
     left: 47px;
@@ -570,21 +571,10 @@ small {
   .sp_h_sns_icon img {
     width: 22px;
   }
-  .top_works {
-    bottom: 5%;
-    width: fit-content;
-    box-sizing: border-box;
-  }
+
   .catch_copy {
     width: auto;
     right: 70px;
-  }
-  .catch_copy_main {
-    font-size: 60px;
-  }
-  .top_wrap {
-    display: flex;
-    flex-direction: column-reverse;
   }
 }
 @media screen and (max-width: 767px) {
@@ -592,5 +582,23 @@ small {
     font-size: 18px;
     top: 25px;
     left: 30px;
+  }
+  .catch_copy_main {
+    font-size: 32px;
+  }
+  .top_wrap {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .top_works {
+    bottom: 5%;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .top_works_button {
+    font-size: 14px;
+  }
+  .top_works img {
+    width: 60px;
   }
 }

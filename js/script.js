@@ -9,8 +9,9 @@
         $('.sp_logo').fadeToggle();
     })
 })
+// ボタンが押されたらpclogoを消す
 const changeVisibility = () => {
-    var ele = $('.pc_logo');
+    var ele = $('sp_logo');
 
     if (ele.css('visibility') == 'hidden') {
         ele.css('visibility', 'visible');
