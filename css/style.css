@@ -36,10 +36,33 @@ html {
   padding-bottom: 8px;
   border-bottom: solid 1px;
 }
-.works_button img,
-.aboutme_button img,
-.toppage_button img {
+.works_button span,
+.aboutme_button span,
+.toppage_button span {
+  position: relative;
+}
+.works_button span::before,
+.aboutme_button span::before,
+.toppage_button span::before {
+  content: "";
+  display: block;
   width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #555555;
+}
+.works_button span::after,
+.aboutme_button span::after,
+.toppage_button span::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #555555;
+  border-radius: 50%;
+  position: absolute;
+  top: 22px;
+  left: 22px;
 }
 
 body {
@@ -100,6 +123,11 @@ header {
 .pc_header_menu ul li:last-child {
   border-radius: 19px;
   border: solid 1px;
+  padding: 0;
+  overflow: hidden;
+}
+.pc_header_menu ul li:last-child:has(a:hover) {
+  border: none;
 }
 
 .first_view {
@@ -113,10 +141,10 @@ header {
   position: absolute;
   bottom: 23%;
   left: 0;
-  right: 0;
+
   margin-left: auto;
   margin-right: auto;
-  width: 1160px;
+  width: fit-content;
   z-index: 150;
   padding-left: 10px;
   padding-right: 10px;
@@ -131,8 +159,48 @@ header {
   padding-bottom: 8px;
   border-bottom: solid 1px;
 }
-.top_works img {
+.top_works span {
+  position: relative;
+}
+.top_works span::before {
+  content: "";
+  display: block;
   width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #555555;
+  transition: 0.3s linear;
+}
+.top_works span::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #555555;
+  border-radius: 50%;
+  position: absolute;
+  top: 22px;
+  left: 22px;
+}
+.top_works a:hover {
+  opacity: 1;
+}
+.top_works a:hover .top_works_button {
+  border: none;
+}
+.top_works a:hover span::before {
+  width: 107px;
+  height: 107px;
+  border-radius: 50%;
+  background-color: #e1afb5;
+  border: none;
+  position: absolute;
+  top: -55px;
+  right: -76px;
+  mix-blend-mode: screen;
+}
+.top_works a:hover span::after {
+  display: none;
 }
 .catch_copy {
   position: absolute;
@@ -248,6 +316,28 @@ header {
 .works_button {
   margin-top: 200px;
 }
+.works_button span {
+  position: relative;
+}
+.works_button span::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #555555;
+}
+.works_button span::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #555555;
+  border-radius: 50%;
+  position: absolute;
+  top: 22px;
+  left: 22px;
+}
 
 /* about me */
 .aboutme {
@@ -294,6 +384,28 @@ header {
   font-size: 20px;
   line-height: 1.9;
   color: white;
+}
+.aboutme_button span {
+  position: relative;
+}
+.aboutme_button span::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #555555;
+}
+.aboutme_button span::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #555555;
+  border-radius: 50%;
+  position: absolute;
+  top: 22px;
+  left: 22px;
 }
 
 /* contact */
