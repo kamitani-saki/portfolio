@@ -9,7 +9,7 @@
         $('.sp_logo').fadeToggle();
     })
 })
-// ボタンが押されたらpclogoを消す
+// ボタンが押されたらsp_logoを消す
 const changeVisibility = () => {
     var ele = $('sp_logo');
 
@@ -24,7 +24,7 @@ var stroke;
 stroke = new Vivus('mask', {//アニメーションをするIDの指定
     start: 'manual',//自動再生をせずスタートをマニュアルに
     type: 'scenario-sync',// アニメーションのタイプを設定
-    duration: 1000,//アニメーションの時間設定。数字が小さくなるほど速い
+    duration: 500,//アニメーションの時間設定。数字が小さくなるほど速い
     forceRender: false,//パスが更新された場合に再レンダリングさせない
     animTimingFunction: Vivus.EASE,//動きの加速減速設定
 }

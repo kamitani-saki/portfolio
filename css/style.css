@@ -94,6 +94,9 @@ header {
 .pc_header_menu ul li {
   padding: 10px 20px;
 }
+.gnavi li a:hover {
+  opacity: 1;
+}
 .pc_header_menu ul li:last-child {
   border-radius: 19px;
   border: solid 1px;
@@ -150,8 +153,8 @@ header {
 
 .top_background_line {
   position: absolute;
-  top: 55%;
-  left: 70%;
+  top: 57%;
+  left: 54%;
   width: 2500px;
   transform: translate(-50%, -50%);
 }
@@ -173,6 +176,7 @@ header {
   padding-right: 10px;
 }
 .concept_text {
+  font-size: 24px;
   line-height: 2.91;
 }
 
@@ -432,7 +436,8 @@ small {
 /* スマホ版メニュー 非表示にする*/
 .sp_btn,
 .sp_header_menu,
-.sp_logo {
+.sp_logo,
+#mask2 {
   display: none;
 }
 
@@ -577,7 +582,15 @@ small {
     right: 70px;
   }
 }
+@media screen and (max-width: 800px) {
+  .concept_text {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 767px) {
+  #mask2 {
+    display: block;
+  }
   .sp_logo {
     font-size: 18px;
     top: 25px;
@@ -599,6 +612,25 @@ small {
     font-size: 14px;
   }
   .top_works img {
+    width: 60px;
+  }
+  .top_background_line {
+  }
+  .title {
+    font-size: 36px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .works_button_text,
+  .aboutme_button_text,
+  .toppage_button_text {
+    font-size: 14px;
+  }
+  .works_button img,
+  .aboutme_button img,
+  .toppage_button img {
     width: 60px;
   }
 }
