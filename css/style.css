@@ -588,4 +588,9 @@ small {
   }
 }
 @media screen and (max-width: 767px) {
+  .sp_logo {
+    font-size: 18px;
+    top: 25px;
+    left: 30px;
+  }
 }
