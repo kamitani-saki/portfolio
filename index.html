@@ -8,14 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <title>portfolio_KamitaniSaki</title>
 </head>
 
@@ -143,42 +142,49 @@
                         <p class="subtitle">制作実績</p>
                     </div>
                     <div class="works_content">
-                        <div class="works_slider">
-                            <div class="works_content_style">
-                                <p class="works_content_title">コーポレートサイト
-                                </p>
-                                <div class="works_img"><img src="./images/top_works1.jpg" alt="" class="works_center">
-                                </div>
-                                <p class="works_content_subtitle">design/coding</p>
+                        <div class="swiper">
+                            <div class="works_slider swiper-wrapper">
+                                <a class="works_content_style swiper-slide">
+                                    <p class="works_content_title">コーポレートサイト
+                                    </p>
+                                    <div class="works_img"><img src="./images/top_works1.jpg" alt=""
+                                            class="works_center">
+                                    </div>
+                                    <p class="works_content_subtitle">design/coding</p>
+                                </a>
+                                <a class="works_content_style swiper-slide">
+                                    <p class="works_content_title">コーポレートサイト</p>
+                                    <div class="works_img">
+                                        <img src="./images/top_works2.jpg" alt="" class="works_center">
+                                    </div>
+                                    <p class="works_content_subtitle">coding</p>
+                                </a>
+                                <a class="works_content_style swiper-slide">
+                                    <p class="works_content_title">バナー</p>
+                                    <div class="works_img">
+                                        <img src="./images/top_works3.jpg" alt="" class="works_center">
+                                    </div>
+                                    <p class="works_content_subtitle">design</p>
+                                </a>
+                                <a class="works_content_style swiper-slide">
+                                    <p class="works_content_title">バナー</p>
+                                    <div class="works_img">
+                                        <img src="./images/top_works4.jpg" alt="" class="works_center">
+                                    </div>
+                                    <p class="works_content_subtitle">design</p>
+                                </a>
+                                <a class="works_content_style swiper-slide">
+                                    <p class="works_content_title">バナー</p>
+                                    <div class="works_img">
+                                        <img src="./images/top_works4.jpg" alt="" class="works_center">
+                                    </div>
+                                    <p class="works_content_subtitle">design</p>
+                                </a>
                             </div>
-                            <div class="works_content_style">
-                                <p class="works_content_title">コーポレートサイト</p>
-                                <div class="works_img">
-                                    <img src="./images/top_works2.jpg" alt="" class="works_center">
-                                </div>
-                                <p class="works_content_subtitle">coding</p>
-                            </div>
-                            <div class="works_content_style">
-                                <p class="works_content_title">バナー</p>
-                                <div class="works_img">
-                                    <img src="./images/top_works3.jpg" alt="" class="works_center">
-                                </div>
-                                <p class="works_content_subtitle">design</p>
-                            </div>
-                            <div class="works_content_style">
-                                <p class="works_content_title">バナー</p>
-                                <div class="works_img">
-                                    <img src="./images/top_works4.jpg" alt="" class="works_center">
-                                </div>
-                                <p class="works_content_subtitle">design</p>
-                            </div>
-                            <div class="works_content_style">
-                                <p class="works_content_title">バナー</p>
-                                <div class="works_img">
-                                    <img src="./images/top_works4.jpg" alt="" class="works_center">
-                                </div>
-                                <p class="works_content_subtitle">design</p>
-                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-scrollbar"></div>
                         </div>
                     </div>
                     <div class="works_solid"></div>
@@ -285,6 +291,7 @@
             </a>
         </div>
     </div>
+    <!-- 手書き風CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
     <script src="./js/script.js"></script>
 

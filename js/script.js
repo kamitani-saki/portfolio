@@ -66,18 +66,27 @@ $(window).scroll(function () {
 });
 
 //===== worksスライダー
-$(function () {
-    $('.works_slider').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: true,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
-        dots: false,
-        arrows: false
-    });
-});
-
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
 // ========スクロールしたら現れるtoppageボタン
 //pagetop
 $(function () {
