@@ -262,25 +262,15 @@ header {
   width: fit-content;
   align-items: center;
 }
-.works_slider {
+
+/* .works_slider {
   display: flex;
   max-width: 100%;
   margin: 0 0 0 auto;
   gap: 53px;
   margin-top: 145px;
-  overflow-x: scroll;
-  /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
-  -ms-overflow-style: none;
-  /*Firefoxへの対応*/
-  scrollbar-width: none;
-}
-
-/*Google Chrome、Safariへの対応*/
-.contents_box::-webkit-scrollbar {
-  display: none;
-}
-
-.works_content_style {
+} */
+/* .works_content_style {
   width: 350px;
   height: 520px;
   background-color: #f4e2e4;
@@ -301,18 +291,50 @@ header {
 .works_img {
   height: 410px;
   width: 350px;
-}
-.works_center {
+} */
+/* .works_center {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   max-width: 100%;
+} */
+
+.works_content {
+  max-width: 960px;
+  margin: 0 auto;
 }
+.works_content .swiper {
+  overflow: visible;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background: rgba(212, 141, 149, 0.25);
+  border-radius: 30px;
+  width: 300px;
+}
+.works-img {
+  background: rgba(255, 255, 255, 0.5);
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+.swiper img {
+  width: 100%;
+}
+.swiper h3 {
+  text-align: center;
+}
+.swiper p {
+  margin: 20px 30px;
+  text-align: right;
+}
+
 .works_solid {
   margin: 45px 40px 0px;
   border-top: solid 2px;
 }
-
 .works_button {
   margin-top: 200px;
 }

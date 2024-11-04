@@ -66,26 +66,14 @@ $(window).scroll(function () {
 });
 
 //===== worksスライダー
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
-  
-    // If we need pagination
+const mySwiper = new Swiper('.swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    grabCursor: true,
     pagination: {
       el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+      type: "progressbar",
+    }
   });
 // ========スクロールしたら現れるtoppageボタン
 //pagetop
