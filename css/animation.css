@@ -82,7 +82,7 @@
 /* 線のアニメーション部分 */
 .scroll1::before {
   display: block;
-  animation: scroll1 4s infinite ease-out;
+  animation: scroll1 2s infinite linear;
   background-color: #9b9696;
 
   content: "";
