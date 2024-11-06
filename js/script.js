@@ -42,7 +42,10 @@ $(window).on('load', function () {
     $("#splash").delay(6000).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
     $("#splash_logo").delay(6000).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
     stroke.play();//SVGアニメーションの実行
-    stroke1.play();
+  
+    setTimeout(function() {
+          stroke1.play();
+    }, 6000)
 });
 
 //======== キャッチコピーの浮き出る文字
@@ -80,7 +83,9 @@ const mySwiper = new Swiper('.swiper', {
     slidesPerView: 'auto',
     spaceBetween: 20,
     grabCursor: true,
-    mousewheel: true,
+    mousewheel: {
+        thresholdDelta: 50,
+    },
     pagination: {
     el: '.swiper-pagination',
     type: "progressbar",

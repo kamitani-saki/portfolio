@@ -562,8 +562,6 @@ small {
   bottom: 100px;
 
   transform: rotate(90deg);
-
-  transition-duration: 2s;
   z-index: 200;
 
   visibility: visible;
