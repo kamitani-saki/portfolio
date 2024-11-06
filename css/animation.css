@@ -53,7 +53,7 @@
   width: 2500px;
 }
 #mask .st0,
-#mask .st1 {
+#mask1 .st1 {
   fill: none;
   stroke: #fff;
   stroke-width: 20; /*線の太さを指定する*/

@@ -307,12 +307,13 @@ header {
 }
 .top_background_line {
   position: absolute;
-  top: 51%;
-  left: 37%;
+  top: 9%;
+  right: 0;
   width: 2500px;
-  transform: translate(-50%, -50%);
 }
-
+.top_background_line img {
+  width: 100%;
+}
 /* メイン */
 .main {
   background-image: url(../images/top_background_left-100.jpg),
@@ -531,6 +532,9 @@ textarea {
   border: none;
   color: #fff;
   transition: 0.8s;
+}
+#sei {
+  padding-left: 20px;
 }
 /* フッター */
 #footer {
