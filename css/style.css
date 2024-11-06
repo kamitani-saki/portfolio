@@ -23,7 +23,8 @@ html {
 }
 .works_button a,
 .aboutme_button a,
-.toppage_button a {
+.toppage_button a,
+.works_all_btn {
   display: block;
   display: flex;
   align-items: center;
@@ -32,28 +33,41 @@ html {
 }
 .works_button_text,
 .aboutme_button_text,
-.toppage_button_text {
+.toppage_button_text,
+.works_all_text {
   padding-bottom: 8px;
   border-bottom: solid 1px;
 }
 .works_button span,
 .aboutme_button span,
-.toppage_button span {
+.toppage_button span,
+.works_all_btn span {
   position: relative;
+  width: 107px;
+  height: 107px;
+  left: -30px;
+  overflow: hidden;
 }
 .works_button span::before,
 .aboutme_button span::before,
-.toppage_button span::before {
+.toppage_button span::before,
+.works_all_btn span::before {
   content: "";
   display: block;
   width: 48px;
   height: 48px;
   border-radius: 50%;
   border: 1px solid #555555;
+  transition: 0.3s linear;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .works_button span::after,
 .aboutme_button span::after,
-.toppage_button span::after {
+.toppage_button span::after,
+.works_all_btn span::after {
   content: "";
   display: block;
   width: 6px;
@@ -61,10 +75,71 @@ html {
   background-color: #555555;
   border-radius: 50%;
   position: absolute;
-  top: 22px;
-  left: 22px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
+.works_button a:hover,
+.aboutme_button a:hover,
+.toppage_button a:hover,
+.works_all_btn a:hover {
+  opacity: 1;
+}
+.works_button a:hover .works_button_text,
+.aboutme_button a:hover .aboutme_button_text,
+.toppage_button a:hover .toppage_button_text,
+.works_all_btn a:hover .works_all_text {
+  border-color: transparent;
+}
+.works_button a:hover span::before,
+.aboutme_button a:hover span::before,
+.toppage_button a:hover span::before,
+.works_all_btn a:hover span::before {
+  width: 107px;
+  height: 107px;
+  border-radius: 50%;
+  background-color: #e1afb5;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.works_button a:hover span::after {
+  content: "view more";
+  width: auto;
+  height: auto;
+  color: #fff;
+  background-color: transparent;
+  padding-bottom: 9px;
+  right: -153px;
+}
+.aboutme_button a:hover span::after {
+  content: "and more";
+  width: auto;
+  height: auto;
+  color: #fff;
+  background-color: transparent;
+  padding-bottom: 9px;
+  right: -153px;
+}
+.toppage_button a:hover span::after {
+  content: "Top Page";
+  width: auto;
+  height: auto;
+  color: #fff;
+  background-color: transparent;
+  padding-bottom: 9px;
+  right: -143px;
+}
+.works_all_btn a:hover span::after {
+  content: "制作一覧へ戻る";
+  width: auto;
+  height: auto;
+  color: #fff;
+  background-color: transparent;
+  padding-bottom: 9px;
+  right: -242px;
+}
 body {
   background-image: url(../images/top_background2-100.jpg);
   background-repeat: no-repeat;
@@ -127,7 +202,7 @@ header {
   overflow: hidden;
 }
 .pc_header_menu ul li:last-child:has(a:hover) {
-  border: none;
+  border-color: transparent;
 }
 
 .first_view {
@@ -140,11 +215,9 @@ header {
 .top_works {
   position: absolute;
   bottom: 23%;
-  left: 50px;
-  right: 0;
+  left: 12%;
   margin-left: auto;
   margin-right: auto;
-  width: 1160px;
   z-index: 150;
   padding-left: 10px;
   padding-right: 10px;
@@ -161,6 +234,10 @@ header {
 }
 .top_works span {
   position: relative;
+  width: 107px;
+  height: 107px;
+  left: -30px;
+  overflow: hidden;
 }
 .top_works span::before {
   content: "";
@@ -170,6 +247,10 @@ header {
   border-radius: 50%;
   border: 1px solid #555555;
   transition: 0.3s linear;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .top_works span::after {
   content: "";
@@ -179,14 +260,15 @@ header {
   background-color: #555555;
   border-radius: 50%;
   position: absolute;
-  top: 22px;
-  left: 22px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .top_works a:hover {
   opacity: 1;
 }
 .top_works a:hover .top_works_button {
-  border: none;
+  border-color: transparent;
 }
 .top_works a:hover span::before {
   width: 107px;
@@ -194,13 +276,18 @@ header {
   border-radius: 50%;
   background-color: #e1afb5;
   border: none;
-  position: absolute;
-  top: -55px;
-  right: -76px;
-  mix-blend-mode: screen;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .top_works a:hover span::after {
-  display: none;
+  content: "works";
+  width: auto;
+  height: auto;
+  color: #fff;
+  background-color: transparent;
+  padding-bottom: 9px;
+  right: -94px;
 }
 .catch_copy {
   position: absolute;
@@ -218,11 +305,10 @@ header {
   letter-spacing: 0.2em;
   margin: 0 0 0 auto;
 }
-
 .top_background_line {
   position: absolute;
-  top: 57%;
-  left: 54%;
+  top: 51%;
+  left: 37%;
   width: 2500px;
   transform: translate(-50%, -50%);
 }
@@ -249,75 +335,33 @@ header {
 }
 
 /* works */
+.works_background_line {
+  z-index: 300;
+}
 .works {
   margin-top: 300px;
   position: relative;
-}
-.woks_all {
-  margin-left: 10%;
 }
 .works_head {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  align-items: center;
 }
-
-/* .works_slider {
-  display: flex;
-  max-width: 100%;
-  margin: 0 0 0 auto;
-  gap: 53px;
-  margin-top: 145px;
-} */
-/* .works_content_style {
-  width: 350px;
-  height: 520px;
-  background-color: #f4e2e4;
-  border-radius: 15px;
-  position: relative;
-}
-.works_content_title {
-  font-size: 14px;
-  text-align: center;
-  margin-top: 22px;
-}
-.works_content_subtitle {
-  font-size: 16px;
-  text-align: right;
-  margin-right: 16px;
-  margin-top: 35px;
-}
-.works_img {
-  height: 410px;
-  width: 350px;
-} */
-/* .works_center {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 100%;
-} */
-
 .works_content {
-  max-width: 450px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 .works_content .swiper {
   overflow: visible;
-  padding-bottom: 50px;
+  padding-bottom: 55px;
 }
 .swiper-slide {
   background: rgba(212, 141, 149, 0.25);
   border-radius: 30px;
   width: 300px;
 }
-.works-img {
+.works_img {
   background: rgba(255, 255, 255, 0.5);
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0 10px;
 }
 .swiper img {
@@ -325,40 +369,32 @@ header {
 }
 .swiper h3 {
   text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 .swiper p {
-  margin: 20px 30px;
+  margin: 6% 10%;
   text-align: right;
 }
+.swiper-slide {
+  margin-top: 150px;
+}
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-scrollbar {
+  display: none;
+}
+.swiper-horizontal > .swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal {
+  bottom: 0;
+  top: auto;
+}
 
-.works_solid {
-  margin: 45px 40px 0px;
-  border-top: solid 2px;
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #000;
 }
 .works_button {
   margin-top: 200px;
-}
-.works_button span {
-  position: relative;
-}
-.works_button span::before {
-  content: "";
-  display: block;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid #555555;
-}
-.works_button span::after {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  background-color: #555555;
-  border-radius: 50%;
-  position: absolute;
-  top: 22px;
-  left: 22px;
 }
 
 /* about me */
@@ -407,28 +443,6 @@ header {
   line-height: 1.9;
   color: white;
 }
-.aboutme_button span {
-  position: relative;
-}
-.aboutme_button span::before {
-  content: "";
-  display: block;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid #555555;
-}
-.aboutme_button span::after {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  background-color: #555555;
-  border-radius: 50%;
-  position: absolute;
-  top: 22px;
-  left: 22px;
-}
 
 /* contact */
 .contact {
@@ -461,6 +475,11 @@ form {
 label {
   display: block;
   margin-bottom: 12px;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #e1afb5;
 }
 input[type="text"] {
   width: 407px;
@@ -506,7 +525,13 @@ textarea {
   border-radius: 37px;
   border: solid 1px;
 }
-
+.btn:active,
+.btn:hover {
+  background: #e1afb5;
+  border: none;
+  color: #fff;
+  transition: 0.8s;
+}
 /* フッター */
 #footer {
   width: 100%;
@@ -527,31 +552,43 @@ small {
   margin-top: 110px;
 }
 /* ページトップボタン */
-#page-top {
+.page_top {
   position: fixed;
   right: 10px;
   bottom: 100px;
-  height: 50px;
+
   transform: rotate(90deg);
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
+
+  transition-duration: 2s;
   z-index: 200;
-  opacity: 1;
+
   visibility: visible;
 }
-#page-top::before {
+.page_top span {
+  width: 108px;
+  height: 108px;
+  position: relative;
+  overflow: hidden;
+  right: -20px;
+}
+.page_top a {
+  display: flex;
+  align-items: center;
+}
+.page_top span::before {
   content: "";
+  position: absolute;
   display: block;
   width: 48px;
   height: 48px;
   border: 1px solid;
+  transition: 0.3s linear;
   border-radius: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
-#page-top::after {
+.page_top span::after {
   content: "";
   display: block;
   width: 20px;
@@ -560,12 +597,37 @@ small {
   border-right: 2px solid;
   transform: rotate(-135deg);
   position: absolute;
-  left: 18px;
-  bottom: 14px;
+  top: 40%;
+  left: 46%;
+}
+.page_top a:hover {
+  opacity: 1;
+}
+.page_top a:hover .pagetop_btn_text {
+  border-color: transparent;
+}
+.page_top a:hover span::before {
+  width: 107px;
+  height: 107px;
+  border-radius: 50%;
+  background-color: #e1afb5;
+  border: none;
+  top: 50%;
+  left: 50%;
+}
+.page_top a:hover span::after {
+  content: "page";
+  width: auto;
+  height: auto;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  transform: rotate(0);
+  left: 88px;
 }
 
-#page-top p {
-  margin-bottom: 6px;
+.pagetop_btn_text {
+  padding-bottom: 7px;
 }
 /* スマホ版メニュー 非表示にする*/
 .sp_btn,

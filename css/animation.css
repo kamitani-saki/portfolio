@@ -4,7 +4,7 @@
   opacity: 0;
 }
 .slide {
-  animation: slideAnime 3s ease forwards;
+  animation: slideAnime 3s ease 1s forwards;
 }
 @keyframes slideAnime {
   from {
@@ -42,19 +42,21 @@
 /* Loading画像中央配置　*/
 #splash_logo {
   position: absolute;
-  top: 55%;
-  left: 70%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  margin-top: 10px;
 }
 
 /* Loading アイコンの大きさ設定　*/
 #splash_logo svg {
   width: 2500px;
 }
-#mask .st0 {
+#mask .st0,
+#mask .st1 {
   fill: none;
   stroke: #fff;
-  stroke-width: 4.5; /*線の太さを指定する*/
+  stroke-width: 20; /*線の太さを指定する*/
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
@@ -62,17 +64,7 @@
   stroke-dashoffset: 1500; /* 線の位置を指定する */
   transition-delay: 0s;
 }
-#mask2 .st1 {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 4.5; /*線の太さを指定する*/
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-  stroke-dasharray: 1500; /* 線の間隔を指定する */
-  stroke-dashoffset: 1500; /* 線の位置を指定する */
-  transition-delay: 0s;
-}
+
 /* =========conceptの横の線 */
 /* スクロールダウンの位置 */
 .scroll1 {
@@ -112,7 +104,7 @@
     transform-origin: 0 0;
   }
   50% {
-    transform: scale(0.3, 0.3);
+    transform: scale(0.15, 0.15);
     transform-origin: 0 50%;
   }
   /* 51% {
