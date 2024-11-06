@@ -236,25 +236,28 @@
                     <p class="subtitle">お問い合せ</p>
                 </div>
 
-                <form action="" class="center fadein fadein-bottom">
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScbIEzN4TcusDtF7GdV72uMNxCkL1YyiVXwWnheJZoUTC2zYQ/formResponse"
+                    method="POST" target="hidden_iframe" onsubmit="submitted=true;"
+                    class="center fadein fadein-bottom c-form">
                     <p class="contact_description
                 ">お仕事のご依頼、ご相談などお気軽にお問い合わせください。</p>
                     <div class="contact_wrap">
                         <label for="name">お名前</label>
                         <div class="fullname">
-                            <input type="text" id="sei" class="solid">
-                            <input type="text" id="mei" class="solid">
+                            <input type="text" id="sei" class="solid" name="entry.1805511187" required="required">
+                            <input type="text" id="mei" class="solid" name="805385473" required="required">
                         </div>
 
                         <label for="furigana">フリガナ</label>
-                        <input type="furigana" id="フリガナ" class="solid">
+                        <input type="furigana" id="フリガナ" class="solid" name="1898995089" required="required">
                         <label for="phone">電話番号</label>
-                        <input type="phone" id="phone" class="solid">
+                        <input type="phone" id="phone" class="solid" name="54987054">
                         <label for="email">メールアドレス</label>
-                        <input type="email" id="amail" class="solid">
+                        <input type="email" id="email" class="solid" name="197742790" required="required">
 
                         <label for="message">お問い合せ内容</label>
-                        <textarea name="" id="message" class="solid"></textarea>
+                        <textarea id="message" class="solid" name="1281863408"></textarea>
 
                         <button class="btn" type="submit">送信する</button>
                     </div>
@@ -288,7 +291,11 @@
     <!-- 手書き風CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
     <script src="./js/script.js"></script>
-
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location='./contact.html';}"></iframe>
 </body>
 
 </html>
