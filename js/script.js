@@ -39,15 +39,27 @@ stroke1 = new Vivus('mask1', {//アニメーションをするIDの指定
 }
 );
 $(window).on('load', function () {
-    $("#splash").delay(6000).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
-    $("#splash_logo").delay(6000).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
+    $("#splash").delay(500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
+    $("#splash_logo").delay(500).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
     stroke.play();//SVGアニメーションの実行
-  
-    setTimeout(function() {
-          stroke1.play();
-    }, 6000)
-});
 
+    // setTimeout(function() {
+    //       stroke1.play();
+    // }, 6000)
+});
+// window.addEventListener("scroll", function () {
+//     const elm = document.querySelector(".works_background_line");
+//     const scroll = window.scrollY;
+//     if (scroll > 1000) {
+//       elm.style.opacity = "1";
+
+//       // console.log(scroll);
+//     } else {
+//       elm.style.opacity = "0";
+
+//       // console.log(scroll);
+//     }
+//   });
 //======== キャッチコピーの浮き出る文字
 function BlurTextAnimeControl() {
     $('.slideConts').each(function () {
@@ -114,6 +126,9 @@ $(function () {
         return false;
     });})
     
+    // スクロールしたら要素が現れる
+
+
     
  //同じ日付で2回目以降ならローディング画面非表示の設定
 

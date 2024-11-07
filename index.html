@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- グーグルフォントのサイトURL -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400&display=swap"
         rel="stylesheet">
+    <!-- リセットcss -->
     <link rel="stylesheet" href="./css/reset.css">
+    <!-- sliderのcdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- スタイルcss -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- アニメーションcss -->
     <link rel="stylesheet" href="./css/animation.css">
     <title>portfolio_KamitaniSaki</title>
 </head>
@@ -25,6 +30,7 @@
                     <p class="slideConts txt3">丁寧に。</p>
                 </div>
             </div>
+
             <svg id="mask" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px" y="0px" width="1921.1" height="930.02" viewBox="0 0 1921.1 930.02"
                 style="enable-background:new 0 0 1921.1 930.02;" xml:space="preserve">
@@ -88,9 +94,9 @@
                     </div>
                     <div class="catch_copy">
                         <div class="catch_copy_main">
-                            <p class="slideConts txt1">「想い」を</p><br>
-                            <p class="slideConts txt2">つむいで、</p><br>
-                            <p class="slideConts txt3">丁寧に。</p>
+                            <p>「想い」を</p><br>
+                            <p>つむいで、</p><br>
+                            <p>丁寧に。</p>
                         </div>
                     </div>
                 </div>
@@ -125,13 +131,14 @@
                         </mask>
                     </svg>
 
-                    <!-- <img src="./images/pc_top_line2.svg" alt="流れる糸2"> -->
+
                 </div>
                 <div class="woks_all center">
                     <div class="works_head">
-                        <h2 class="title">works</h2>
-                        <p class="subtitle">制作実績</p>
-
+                        <div class="works_title">
+                            <h2 class="title">works</h2>
+                            <p class="subtitle">制作実績</p>
+                        </div>
                         <div class="works_content fadein fadein-bottom">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
@@ -188,6 +195,7 @@
                             <span></span>
                         </a>
                     </div>
+                </div>
             </section>
             <section id="aboutme" class="aboutme center">
                 <div class="aboutme_head">
@@ -249,28 +257,24 @@
                             <input type="text" id="sei" class="solid" name="entry.1805511187" required="required">
                             <input type="text" id="mei" class="solid" name="805385473" required="required">
                         </div>
-
                         <label for="furigana">フリガナ</label>
-                        <input type="furigana" id="フリガナ" class="solid" name="1898995089" required="required">
+                        <input type="furigana" id="furigana" class="solid" name="1898995089" required="required">
                         <label for="phone">電話番号</label>
                         <input type="phone" id="phone" class="solid" name="54987054">
                         <label for="email">メールアドレス</label>
                         <input type="email" id="email" class="solid" name="197742790" required="required">
-
                         <label for="message">お問い合せ内容</label>
                         <textarea id="message" class="solid" name="1281863408"></textarea>
-
                         <button class="btn" type="submit">送信する</button>
                     </div>
                 </form>
-
             </section>
         </div>
 
         <div id="footer">
 
             <div class="footer_menu">
-                <ul>
+                <ul class="gnavi_ft">
                     <li><a href="#header">home</a></li>
                     <li><a href="./works.html">works</a></li>
                     <li><a href="./aboutme.html">aboutme</a></li>
@@ -287,16 +291,22 @@
         </div>
 
     </div>
+    <!-- sliderファイル -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- jqueryファイル -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- ローディング画面を1日に2回表示させないためのcookie -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.
 cookie.js"></script>
     <!-- 手書き風CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+    <!-- scriptファイル -->
     <script src="./js/script.js"></script>
+    <!-- googleフォーム用ファイル -->
     <script type="text/javascript">
         let submitted = false;
     </script>
+    <!-- ローディング画面を1日に2回表示させないためのフレーム -->
     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
         onload="if(submitted){window.location='./contact.html';}"></iframe>
 </body>

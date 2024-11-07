@@ -4,15 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- グーグルフォントのサイトURL -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400&display=swap"
         rel="stylesheet">
+    <!-- リセットcss -->
     <link rel="stylesheet" href="./css/reset.css">
+    <!-- sliderのcdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- スタイルcss -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- アニメーションcss -->
     <link rel="stylesheet" href="./css/animation.css">
-    <link rel="stylesheet" href="./css/works.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <title>works_KamitaniSaki</title>
 </head>
 
@@ -27,11 +32,9 @@
             </h1>
             <nav class="pc_header_menu">
                 <ul class="gnavi">
-                    <li class="current"><a href="./works.html">works</a></li>
+                    <li><a href="./works.html">works</a></li>
                     <li><a href="./aboutme.html">about me</a></li>
-                    <a href="./index.html#contact">
-                        <li>contact</li>
-                    </a>
+                    <li> <a href="./index.html#contact">contact</a></li>
                 </ul>
             </nav>
             <div class="sp_btn" onclick="changeVisibility()">
@@ -54,8 +57,10 @@
     </header>
     <div class="works_main">
         <div class="works_head center">
-            <h2 class="title">works</h2>
-            <p class="subtitle">制作実績</p>
+            <div class="works_title">
+                <h2 class="title">works</h2>
+                <p class="subtitle">制作実績</p>
+            </div>
         </div>
         <div class="workspage_wrap center">
             <div class="workspage_content">
@@ -110,7 +115,7 @@
     </div>
     <div id="footer">
         <div class="footer_menu">
-            <ul>
+            <ul class="gnavi_ft">
                 <li><a href="./index.html">home</a></li>
                 <li><a href="./works.html">works</a></li>
                 <li><a href="./aboutme.html">aboutme</a></li>
@@ -121,15 +126,18 @@
 
     </div>
     <div class="pagetop active">
-        <a href="#header" id="page-top" class="=active">
+        <a href="#header" id="page-top" class="active">
             <p>page top</p>
             <span></span>
         </a>
     </div>
+    <!-- jqueryファイル -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 手書き風CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+    <!-- scriptファイル -->
     <script src="./js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.
-cookie.js"></script>
+
 </body>
 
 </html>

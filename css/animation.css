@@ -25,8 +25,6 @@
   animation-delay: 3.5s;
 }
 
-/*========= SVG操作手書き風にするためのCSS ===============*/
-
 /*========= LoadingのためのCSS ===============*/
 
 /* Loading背景画面設定　*/
@@ -49,9 +47,11 @@
 }
 
 /* Loading アイコンの大きさ設定　*/
+
 #splash_logo svg {
   width: 2500px;
 }
+/*========= SVG操作手書き風にするためのCSS ===============*/
 #mask .st0,
 #mask1 .st1 {
   fill: none;
@@ -75,7 +75,7 @@
 .scroll1::before {
   display: block;
   animation: scroll1 2s infinite linear;
-  background-color: #9b9696;
+  background-color: #555555;
 
   content: "";
   height: 345px;
@@ -154,11 +154,13 @@
 }
 
 /* ======テキストナビゲーション ====== */
-.gnavi li:not(:last-child) a {
+.gnavi li:not(:last-child) a,
+.gnavi_ft li a {
   /*線の基点とするためrelativeを指定*/
   position: relative;
 }
-.gnavi li:not(:last-child) a::after {
+.gnavi li:not(:last-child) a::after,
+.gnavi_ft li a::after {
   content: "";
   /*絶対配置で線の位置を決める*/
   position: absolute;
@@ -175,16 +177,17 @@
 }
 /*現在地とhoverの設定*/
 .gnavi li.current a::after,
-.gnavi li:not(:last-child) a:hover::after {
+.gnavi li:not(:last-child) a:hover::after,
+.gnavi_ft li a:hover::after {
   transform: scale(1, 1); /*X方向にスケール拡大*/
 }
-*/
 
 /*==================================================
 共通　横並びのための設定
 ===================================*/
 
-.gnavi li a {
+.gnavi li a,
+.gnavi_ft li a {
   display: block;
 }
 
@@ -223,4 +226,19 @@
 }
 .gnavi li:last-child a:hover {
   color: #fff;
+}
+
+/* スクロールしたら下からふわっと */
+
+.fadein {
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: all 3s;
+  &.fadein-bottom {
+    transform: translate(0, 30px);
+  }
+  &.scrollin {
+    opacity: 1 !important;
+    transform: translate(0, 0) !important;
+  }
 }

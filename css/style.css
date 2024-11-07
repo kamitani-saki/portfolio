@@ -145,7 +145,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: contain;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .fadein {
@@ -192,7 +192,8 @@ header {
 .pc_header_menu ul li {
   padding: 10px 20px;
 }
-.gnavi li a:hover {
+.gnavi li a:hover,
+.gnavi_ft li a:hover {
   opacity: 1;
 }
 .pc_header_menu ul li:last-child {
@@ -347,6 +348,10 @@ header {
   display: flex;
   flex-direction: column;
   width: fit-content;
+  align-items: flex-start;
+}
+.works_title {
+  text-align: center;
 }
 .works_content {
   max-width: 1160px;
@@ -471,7 +476,7 @@ form {
 }
 .contact_wrap {
   width: fit-content;
-  margin: 0 auto;
+  margin: 0 auto 15px;
 }
 label {
   display: block;
@@ -483,11 +488,18 @@ textarea:focus-visible {
   transition: 0.8s;
 }
 input[type="text"] {
-  width: 407px;
+  width: 387px;
   height: 60px;
   border-radius: 30px;
   border: solid 1px;
   margin-bottom: 58px;
+}
+#sei,
+#mei,
+#furigana,
+#phone,
+#email {
+  padding-left: 20px;
 }
 .fullname {
   display: flex;
@@ -497,17 +509,21 @@ input[type="text"] {
 input[type="furigana"],
 input[type="phone"],
 input[type="email"] {
-  width: 850px;
+  width: 830px;
   height: 60px;
   border-radius: 30px;
   border: solid 1px;
   margin-bottom: 58px;
 }
 textarea {
-  width: 850px;
-  height: 350px;
+  width: 830px;
+  height: 330px;
   border-radius: 25px;
   border: solid 1px;
+}
+#message {
+  padding-left: 20px;
+  padding-top: 20px;
 }
 .contact_background_line {
   position: absolute;
@@ -533,9 +549,7 @@ textarea {
   color: #fff;
   transition: 0.8s;
 }
-#sei {
-  padding-left: 20px;
-}
+
 /* フッター */
 #footer {
   width: 100%;
@@ -811,8 +825,7 @@ small {
   .top_works img {
     width: 60px;
   }
-  .top_background_line {
-  }
+
   .title {
     font-size: 36px;
   }
