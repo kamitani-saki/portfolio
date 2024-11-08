@@ -38,15 +38,19 @@ stroke1 = new Vivus('mask1', {//アニメーションをするIDの指定
     animTimingFunction: Vivus.EASE,//動きの加速減速設定
 }
 );
-$(window).on('load', function () {
-    $("#splash").delay(500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
-    $("#splash_logo").delay(500).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
-    stroke.play();//SVGアニメーションの実行
 
-    // setTimeout(function() {
-    //       stroke1.play();
+$(window).on('load',function(){
+    $("#splash").delay(600).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
+	$("#splash_logo").delay(600).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
+        stroke.play();//SVGアニメーションの実行
+        // stroke1.play();
+    //     stroke2.play();
+    //     setTimeout(function() {
+    //     stroke1.play();
     // }, 6000)
+
 });
+
 // window.addEventListener("scroll", function () {
 //     const elm = document.querySelector(".works_background_line");
 //     const scroll = window.scrollY;
@@ -90,6 +94,30 @@ $(window).scroll(function () {
     });
 });
 
+    // スクロールしたら要素が現れる
+// 動きのきっかけとなるアニメーションの名前を定義
+function fadeAnime(){
+    //ふわっと動くきっかけのクラス名と動きのクラス名の設定
+    $('.fadeUpTrigger').each(function(){ //fadeInUpTriggerというクラス名が
+    var elemPos = $(this).offset().top-50; //要素より、50px上の
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight){
+    $(this).addClass('fadeUp');
+    // 画面内に入ったらfadeInというクラス名を追記
+    }else{
+    $(this).removeClass('fadeUp');
+    // 画面外に出たらfadeInというクラス名を外す
+    }
+    });
+
+}
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function (){
+    fadeAnime();/* アニメーション用の関数を呼ぶ*/
+  });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+
 //===== worksスライダー
 const mySwiper = new Swiper('.swiper', {
     slidesPerView: 'auto',
@@ -126,10 +154,7 @@ $(function () {
         return false;
     });})
     
-    // スクロールしたら要素が現れる
 
-
-    
  //同じ日付で2回目以降ならローディング画面非表示の設定
 
 var splash_text = $.cookie('accessdate'); //キーが入っていれば年月日を取得
