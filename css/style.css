@@ -461,8 +461,9 @@ header {
   display: flex;
   flex-direction: column;
   margin-top: 225px;
-  align-items: center;
-  width: fit-content;
+}
+.contact_title {
+  text-align: center;
 }
 form {
   padding-left: 10px;
@@ -529,6 +530,9 @@ textarea {
   left: 52%;
   width: 2500px;
   transform: translate(-50%, -50%);
+}
+.sp_br {
+  display: none;
 }
 .btn {
   display: block;
@@ -819,13 +823,17 @@ small {
     position: static;
     padding-left: 58px;
   }
+  .top_works a {
+    gap: 18px;
+  }
   .top_works_button {
     font-size: 14px;
   }
-  .top_works img {
-    width: 60px;
-  }
 
+  .top_works span::before {
+    width: 60px;
+    height: 60px;
+  }
   .title {
     font-size: 36px;
   }
@@ -838,12 +846,96 @@ small {
   .toppage_button_text {
     font-size: 14px;
   }
-  .works_button img,
-  .aboutme_button img,
-  .toppage_button img {
-    width: 60px;
-  }
+
   .top_background_line {
     width: 1000px;
+  }
+  .concept {
+    margin-left: 36px;
+  }
+  .scroll1::after {
+    height: 240px;
+    margin-top: -240px;
+  }
+  .scroll1::before {
+    height: 240px;
+  }
+  .scroll1 {
+    height: 240px;
+  }
+  .works {
+    margin-left: 36px;
+  }
+  .works_button span::before,
+  .aboutme_button span::before,
+  .toppage_button span::before,
+  .works_all_btn span::before {
+    width: 60px;
+    height: 60px;
+  }
+  .works_button a,
+  .aboutme_button a,
+  .toppage_button a,
+  .works_all_btn {
+    gap: 18px;
+  }
+
+  .works_button,
+  .aboutme_button,
+  .toppage_button {
+    padding-left: 58px;
+  }
+  .page_top span::before {
+    height: 60px;
+    width: 60px;
+  }
+  .page_top span {
+    right: 0px;
+  }
+  .aboutme {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+  .aboutme_text {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 160px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .aboutme_photo {
+    width: 56%;
+  }
+  .aboutme_photo img {
+    border-radius: 10px;
+  }
+  .aboutme_description {
+    width: 80%;
+    margin: -150px 0 0 0;
+    border-radius: 10px;
+  }
+  .aboutme_text_wrap {
+    padding: 20px;
+  }
+  .aboutme_wrap {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .contact_description {
+    font-size: 14px;
+  }
+  .sp_br {
+    display: block;
+  }
+  .contact {
+    margin-left: 36px;
+  }
+  .contact_head {
+    flex-direction: row;
+  }
+  .contact_description {
+    margin-left: 0;
+    line-height: 1.8;
   }
 }
