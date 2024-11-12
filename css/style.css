@@ -341,6 +341,11 @@ header {
 .works {
   margin-top: 300px;
   position: relative;
+  padding-left: 10px;
+}
+.works_all {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .works_head {
   display: flex;
@@ -474,7 +479,8 @@ form {
   margin: 63px auto 113px;
 }
 .contact_wrap {
-  width: fit-content;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto 15px;
 }
 label {
@@ -504,7 +510,9 @@ input[type="text"] {
 }
 #furigana,
 #phone,
-#email {
+#email,
+#sei,
+#mei {
   margin-top: 12px;
 }
 .fullname {
@@ -803,9 +811,9 @@ small {
     right: 70px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 785px) {
   .concept_text {
-    font-size: 16px;
+    font-size: 3.03797468354vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -860,6 +868,9 @@ small {
   }
   .concept {
     margin-left: 36px;
+  }
+  .concept_text {
+    font-size: 16px;
   }
   .scroll1::after {
     height: 240px;
@@ -954,6 +965,8 @@ small {
   .fullname {
     width: 93%;
     gap: 10%;
+    text-align: center;
+    margin: 0 auto;
   }
   input[type="text"] {
     width: 45%;
