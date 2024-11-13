@@ -1,7 +1,7 @@
 @charset "utf-8";
-html {
+/* html {
   overflow-x: hidden;
-}
+} */
 body {
   background-image: url(../images/top_background2-100.jpg),
     url(../images/top_background1-100.jpg);
@@ -64,6 +64,7 @@ header {
 }
 .introduction_photo img {
   border-radius: 15px;
+  width: 100%;
 }
 .skill_head,
 .strong_head,
@@ -210,9 +211,15 @@ main {
   .aboutme_main {
     margin-left: 36px;
   }
-  .center {
-  }
+
   .introduction {
     flex-direction: column-reverse;
+  }
+  .introduction_photo {
+    width: 213px;
+    margin: 0 auto;
+  }
+  .introduction_wrap {
+    width: 300px;
   }
 }

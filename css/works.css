@@ -25,6 +25,9 @@ header {
   width: 540px;
   margin-bottom: 66px;
 }
+.workspage_content img {
+  width: 100%;
+}
 h3 {
   margin-top: 20px;
 }
@@ -56,4 +59,12 @@ h3 {
   }
 }
 @media screen and (max-width: 767px) {
+  .workspage_wrap {
+    text-align: center;
+    width: fit-content;
+    display: block;
+  }
+  .workspage_wrap h3 {
+    width: fit-content;
+  }
 }

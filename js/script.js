@@ -33,7 +33,16 @@ var stroke1;
 stroke1 = new Vivus('mask1', {//アニメーションをするIDの指定
     start: 'manual',//自動再生をせずスタートをマニュアルに
     type: 'scenario-sync',// アニメーションのタイプを設定
-    duration:500,//アニメーションの時間設定。数字が小さくなるほど速い
+    duration:300,//アニメーションの時間設定。数字が小さくなるほど速い
+    forceRender: false,//パスが更新された場合に再レンダリングさせない
+    animTimingFunction: Vivus.EASE,//動きの加速減速設定
+}
+);
+var stroke2;
+stroke2 = new Vivus('mask2', {//アニメーションをするIDの指定
+    start: 'manual',//自動再生をせずスタートをマニュアルに
+    type: 'scenario-sync',// アニメーションのタイプを設定
+    duration:300,//アニメーションの時間設定。数字が小さくなるほど速い
     forceRender: false,//パスが更新された場合に再レンダリングさせない
     animTimingFunction: Vivus.EASE,//動きの加速減速設定
 }
@@ -43,27 +52,31 @@ $(window).on('load',function(){
     $("#splash").delay(600).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
 	$("#splash_logo").delay(600).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
         stroke.play();//SVGアニメーションの実行
-        // stroke1.play();
-    //     stroke2.play();
-    //     setTimeout(function() {
-    //     stroke1.play();
-    // }, 6000)
-
 });
 
-// window.addEventListener("scroll", function () {
-//     const elm = document.querySelector(".works_background_line");
-//     const scroll = window.scrollY;
-//     if (scroll > 1000) {
-//       elm.style.opacity = "1";
+window.addEventListener("scroll", function () {
+    // ウィンドウがスクロールされている量を取得する
+    const scroll = window.scrollY;
+    console.log(scroll)
+    // #worksの一番上のラインがトップから見てどこに配置されているかを取得
+    const worksTop = document.querySelector("#works").getBoundingClientRect().top
+    // スクロールされた量が、#worksの一番上のラインより大きくなったら、実行
+    if (scroll > worksTop) {
+      stroke1.play()
+    }
+  });
+  window.addEventListener("scroll", function () {
+    // ウィンドウがスクロールされている量を取得する
+    const scroll2 = window.scrollY;
+    console.log(scroll)
+    // #worksの一番上のラインがトップから見てどこに配置されているかを取得
+    const worksTop2 = document.querySelector("#contact").getBoundingClientRect().top
+    // スクロールされた量が、#worksの一番上のラインより大きくなったら、実行
+    if (scroll2 > worksTop2) {
+      stroke2.play()
+    }
+  });
 
-//       // console.log(scroll);
-//     } else {
-//       elm.style.opacity = "0";
-
-//       // console.log(scroll);
-//     }
-//   });
 //======== キャッチコピーの浮き出る文字
 function BlurTextAnimeControl() {
     $('.slideConts').each(function () {

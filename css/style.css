@@ -30,6 +30,7 @@ html {
   align-items: center;
   gap: 12px;
   z-index: 150;
+  padding-left: 30px;
 }
 .works_button_text,
 .aboutme_button_text,
@@ -215,7 +216,7 @@ header {
 }
 .top_works {
   position: absolute;
-  bottom: 23%;
+  bottom: 30%;
   left: 12%;
   margin-left: auto;
   margin-right: auto;
@@ -288,26 +289,29 @@ header {
   padding-bottom: 9px;
   right: -94px;
 }
-.catch_copy {
+.catch_copy,
+.catch_copy_lo {
   position: absolute;
   top: 30%;
-  left: 0;
   right: 40px;
   z-index: 100;
   width: 1160px;
   margin: 0 auto;
+}
+.catch_copy_lo {
+  top: 27%;
 }
 .catch_copy_main {
   writing-mode: vertical-rl;
   font-size: 75px;
   line-height: 1.2;
   letter-spacing: 0.2em;
-  margin: 0 0 0 auto;
+  margin: 0 10% 0 auto;
 }
 .top_background_line {
   position: absolute;
-  top: 9%;
-  right: 0;
+  top: 0%;
+  right: -4%;
   width: 2500px;
 }
 .top_background_line img {
@@ -335,13 +339,14 @@ header {
 }
 
 /* works */
-.works_background_line {
-  z-index: 300;
-}
+
 .works {
-  margin-top: 300px;
   position: relative;
   padding-left: 10px;
+}
+.works_background_line {
+  margin-top: 300px;
+  z-index: 300;
 }
 .works_all {
   padding-left: 10px;
@@ -454,6 +459,7 @@ header {
 }
 
 /* contact */
+
 .contact {
   position: relative;
   overflow: hidden;
@@ -470,17 +476,18 @@ header {
 .contact_title {
   text-align: center;
 }
+
 form {
   padding-left: 10px;
   padding-right: 10px;
 }
 .contact_description {
-  width: fit-content;
+  text-align: center;
   margin: 63px auto 113px;
 }
 .contact_wrap {
   max-width: 100%;
-  width: 100%;
+
   margin: 0 auto 15px;
   width: fit-content;
 }
@@ -495,13 +502,7 @@ textarea:focus-visible {
   outline: #e1afb5 auto 3px;
   transition: 0.8s;
 }
-input[type="text"] {
-  width: 387px;
-  height: 60px;
-  border-radius: 30px;
-  border: solid 1px;
-  margin-bottom: 58px;
-}
+
 #name,
 #furigana,
 #phone,
@@ -510,11 +511,6 @@ input[type="text"] {
   margin-top: 12px;
 }
 
-.fullname {
-  display: flex;
-  width: 852px;
-  justify-content: space-between;
-}
 input[type="text"],
 input[type="furigana"],
 input[type="phone"],
@@ -538,11 +534,18 @@ textarea {
 }
 .contact_background_line {
   position: absolute;
-  top: 46%;
-  left: 52%;
+  top: 235px;
+  right: 0;
   width: 2500px;
-  transform: translate(-50%, -50%);
 }
+.contact_background_line svg {
+  width: 100%;
+}
+.contact_background_line svg image {
+  width: 100%;
+  transform: translateX(calc((2500px - 100%) / 2));
+}
+
 .sp_br {
   display: none;
 }
@@ -662,8 +665,7 @@ small {
 /* スマホ版メニュー 非表示にする*/
 .sp_btn,
 .sp_header_menu,
-.sp_logo,
-#mask2 {
+.sp_logo {
   display: none;
 }
 
@@ -806,13 +808,49 @@ small {
     width: auto;
     right: 70px;
   }
+  .catch_copy_lo {
+    right: -2%;
+  }
+  .contact {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+  .contact_description {
+    text-align: left;
+    font-size: 14px;
+    margin-left: 0;
+    line-height: 1.8;
+  }
+  .contact_head {
+    flex-direction: row;
+  }
+  .contact_wrap {
+    width: 80%;
+  }
+
+  input[type="text"],
+  input[type="furigana"],
+  input[type="phone"],
+  input[type="email"] {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+    height: 200px;
+  }
+  .btn {
+    width: 60%;
+  }
+  .page_top {
+    right: -35px;
+  }
 }
 @media screen and (max-width: 785px) {
   .concept_text {
     font-size: 3.03797468354vw;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 810px) {
   #mask2 {
     display: block;
   }
@@ -937,43 +975,13 @@ small {
     flex-direction: column-reverse;
     align-items: center;
   }
-  .contact_description {
-    font-size: 14px;
-    margin-left: 0;
-    line-height: 1.8;
-  }
+
   .sp_br {
     display: block;
   }
-  .contact {
-    margin-left: 36px;
-    margin-right: 36px;
-  }
-  .contact_head {
-    flex-direction: row;
-  }
-  .contact_wrap {
-    max-width: 100%;
-    width: 100%;
-  }
 
-  input[type="text"],
-  input[type="furigana"],
-  input[type="phone"],
-  input[type="email"] {
-    width: 90%;
-    border-radius: 5px;
-  }
-  textarea {
-    width: 90%;
-    height: 200px;
-    border-radius: 5px;
-  }
-  .btn {
-    width: 60%;
-  }
   .page_top {
-    right: -7%;
+    right: -6%;
     bottom: 8%;
   }
 }
