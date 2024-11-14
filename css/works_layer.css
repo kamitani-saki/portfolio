@@ -127,14 +127,14 @@ dd {
     background-image: none;
   }
   .works_all_text {
-    font-size: 12px;
+    font-size: 14px;
   }
   .after_button {
-    font-size: 6px;
+    font-size: 12px;
   }
 }
-@media screen and (max-width: 417px) {
-  .works_all_text {
-    font-size: 6px;
+@media screen and (max-width: 400px) {
+  .works_all_btn {
+    padding-left: 0;
   }
 }

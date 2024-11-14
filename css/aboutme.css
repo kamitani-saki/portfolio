@@ -143,6 +143,7 @@ header {
   font-size: 16px;
   width: 80%;
   text-align: left;
+  line-height: 1.8;
 }
 .strongs {
   position: relative;
@@ -241,6 +242,7 @@ header {
 .favorite_text {
   margin-top: 30px;
   text-align: left;
+  line-height: 1.5;
 }
 .fa_img {
   margin-top: 30px;
@@ -322,10 +324,32 @@ main {
     max-width: none;
   }
   .fa_img {
-    width: 80%;
+    width: 100%;
   }
   .favorite_content {
     width: 50%;
     margin-bottom: 85px;
+  }
+  .design_content dd,
+  .coding_content dd {
+    font-size: 14px;
+  }
+  .name_jp {
+    font-size: 18px;
+  }
+  .name_eg {
+    font-size: 16px;
+    margin-top: 4px;
+  }
+  .name_text {
+    font-size: 14px;
+  }
+  .name_head {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 565px) {
+  .name_head {
+    display: block;
   }
 }

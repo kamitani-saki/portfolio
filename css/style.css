@@ -958,8 +958,14 @@ small {
     padding-left: 58px;
   } */
   .page_top span::before {
-    height: 60px;
-    width: 60px;
+    height: 35px;
+    width: 35px;
+  }
+  .page_top span::after {
+    width: 10px;
+    height: 10px;
+    top: 44%;
+    left: 46%;
   }
   .page_top span {
     right: 0px;
@@ -1004,7 +1010,7 @@ small {
     bottom: 8%;
   }
   .footer_menu {
-    width: 80%;
+    width: 90%;
     max-width: none;
   }
   .footer_menu ul {
