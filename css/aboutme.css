@@ -279,4 +279,8 @@ main {
   .favorite_text {
     font-size: 14px;
   }
+  .favorite_content_wrap {
+    flex-direction: column;
+    align-items: center;
+  }
 }

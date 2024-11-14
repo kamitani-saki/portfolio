@@ -533,7 +533,7 @@ textarea {
 }
 .contact_background_line {
   position: absolute;
-  top: 4800px;
+  top: 4300px;
   right: 0px;
   width: 2500px;
   z-index: 1;
@@ -920,6 +920,9 @@ small {
   }
   .works {
     margin-left: 36px;
+  }
+  .works_title {
+    text-align: left;
   }
   .works_button span::before,
   .aboutme_button span::before,
