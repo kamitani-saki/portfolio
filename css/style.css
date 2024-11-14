@@ -939,11 +939,11 @@ small {
     gap: 18px;
   }
 
-  .works_button,
+  /* .works_button,
   .aboutme_button,
   .toppage_button {
     padding-left: 58px;
-  }
+  } */
   .page_top span::before {
     height: 60px;
     width: 60px;
@@ -996,5 +996,50 @@ small {
   }
   .footer_menu ul {
     gap: 2%;
+  }
+  .scroll {
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 572px) {
+  .scroll1::before {
+    height: 280px;
+  }
+  .scroll1::after {
+    height: 280px;
+    margin-top: -280px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .catch_copy {
+    width: 180px;
+  }
+  .catch_copy_main {
+    margin: 0 auto 0 45px;
+    font-size: 30px;
+  }
+  .page_top {
+    right: -10%;
+  }
+}
+@media screen and (max-width: 364px) {
+  .scroll1::before {
+    height: 330px;
+  }
+  .scroll1::after {
+    height: 330px;
+    margin-top: -330px;
+  }
+  .page_top {
+    right: -14%;
+  }
+}
+@media screen and (max-width: 348px) {
+  .scroll1::before {
+    height: 380px;
+  }
+  .scroll1::after {
+    height: 380px;
+    margin-top: -380px;
   }
 }

@@ -40,20 +40,24 @@ h3 {
   height: fit-content;
   background-color: #fbf3f4;
   margin-top: 200px;
+  text-align: -webkit-center;
 }
 .detail {
   display: flex;
   justify-content: space-evenly;
   padding: 22px 4px;
+  width: 90%;
 }
 .detail:not(:last-child) {
   border-bottom: 1px solid;
 }
 dt {
   width: 40%;
+  text-align: left;
 }
 dd {
   width: 60%;
+  text-align: left;
 }
 .page_selection {
   margin: 140px auto 0;
@@ -95,9 +99,42 @@ dd {
 @media screen and (max-width: 767px) {
   .details_table {
     width: 70%;
+    background-color: transparent;
+    text-align: left;
+    margin-top: 70px;
   }
   h3 {
-    margin-left: 10px;
+    margin-left: 30px;
     margin-top: 170px;
+    font-size: 16px;
+  }
+  .detail {
+    display: block;
+  }
+  .detail:not(:last-child) {
+    border-bottom: none;
+  }
+  .detail dt {
+    border-bottom: 1px solid #555;
+    width: fit-content;
+    padding-bottom: 10px;
+  }
+  .detail dd {
+    width: 100%;
+    padding-top: 10px;
+  }
+  main {
+    background-image: none;
+  }
+  .works_all_text {
+    font-size: 12px;
+  }
+  .after_button {
+    font-size: 6px;
+  }
+}
+@media screen and (max-width: 417px) {
+  .works_all_text {
+    font-size: 6px;
   }
 }

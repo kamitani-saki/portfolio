@@ -62,7 +62,20 @@
             <h2 class="title">contact</h2>
             <p class="subtitle">お問い合せ</p>
         </div>
-
+        <div class="background_line">
+            <div class="contact_bg_line">
+                <svg id="mask6" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1931.32" height="823.99"
+                    viewBox="0 0 1931.32 823.99" style="enable-background:new 0 0 1931.32 823.99;" xml:space="preserve">
+                    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/contact_line.svg"
+                        width="1931.32" height="823.99" mask="url(#clipmask6)"></image>
+                    <mask id="clipmask6" maskUnits="objectBoundingBox">
+                        <path data-delay="0" class="st6"
+                            d="M3.61,133.31S103.74-1.62,260.48,4.72s204.52,69.63,168.34,127.11-113.88,65.01-108.07,166.51c0,0-6.51,50.6,114.69,97.84,137.52,47.19,190.26,93.85,241.84,135.91,59.13,46.09-24.08,126.01,31.59,198.05,22.63,31.18,81.73,73.09,230.81,73.47s316.55-56.35,398.01-41.81c0,0,129.22-3.14,185.76,17.07,59.48,21.25,239.72,44.44,266.07,40.11s120.79-13.46,138.64-30.92" />
+                    </mask>
+                </svg>
+            </div>
+        </div>
         <div class="message">
             <h3 class="thanks">お問い合わせありがとうございます</h3>
             <p class="thanks_text">このたびは、お問い合わせいただきありがとうございます。<br>
@@ -80,7 +93,7 @@
             </a>
         </div>
 
-        <img src="./images/contact_line.svg" alt="" class="contact_img">
+
     </div>
     <div id="footer">
 
@@ -101,6 +114,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
     <!-- scriptファイル -->
     <script src="./js/script.js"></script>
+    <script>
+        var stroke6;
+        stroke6 = new Vivus('mask6', {//アニメーションをするIDの指定
+            start: 'manual',//自動再生をせずスタートをマニュアルに
+            type: 'scenario-sync',// アニメーションのタイプを設定
+            duration: 300,//アニメーションの時間設定。数字が小さくなるほど速い
+            forceRender: false,//パスが更新された場合に再レンダリングさせない
+            animTimingFunction: Vivus.EASE,//動きの加速減速設定
+        }
+        );
+        $(window).on('load', function () {
+            stroke6.play();//SVGアニメーションの実行
+        });
+    </script>
 </body>
 
 </html>

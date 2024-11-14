@@ -59,6 +59,28 @@ header {
   position: relative;
   z-index: -1;
 }
+.background_line {
+  position: relative;
+  height: 100px;
+  z-index: 1;
+}
+.contact_bg_line {
+  width: 2500px;
+  position: absolute;
+  top: 165px;
+  left: 0;
+}
+.contact_bg_line svg {
+  width: 100%;
+}
+.contact_bg_line svg image {
+  width: 100%;
+  transform: translateX(-300px);
+}
+.message {
+  position: relative;
+  z-index: 100;
+}
 @media screen and (max-width: 767px) {
   .contact_main {
     padding-left: 10px;

@@ -22,14 +22,21 @@ header {
 }
 .background_line {
   position: relative;
-  height: 800px;
+  height: 100px;
+  z-index: 1;
 }
-.aboutme_background_line1,
-.aboutme_background_line2 {
+.aboutme_background_line1 {
   width: 2500px;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -7px;
+  margin-right: calc((100% - 100vw) / 2);
+}
+.aboutme_background_line2 {
+  width: 2500px;
+  position: absolute;
+  top: 100px;
+  right: 0px;
   margin-right: calc((100% - 100vw) / 2);
 }
 .aboutme_background_line1 svg,
@@ -143,16 +150,29 @@ header {
   padding-left: 10px;
   padding-right: 10px;
 }
-.skill_icon {
+.skill_icon_d {
   display: flex;
   justify-content: space-between;
+  width: 60%;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.skill_icon_d img {
+  width: 22%;
+  max-width: 44px;
+}
+.skill_icon_c {
+  display: flex;
+  gap: 2%;
   width: 80%;
   text-align: left;
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.skill_icon img {
+.skill_icon_c img {
   width: 22%;
+  max-width: 44px;
 }
 .strong_head {
   margin-bottom: 160px;
@@ -190,6 +210,10 @@ header {
 .strong_text {
   font-size: 16px;
 }
+.favorite {
+  position: relative;
+  z-index: 100;
+}
 .favorite_content_wrap {
   margin-top: 145px;
   display: flex;
@@ -211,7 +235,8 @@ header {
   margin-top: 48px;
 }
 .favorite_photo .fa_icon {
-  height: 90px;
+  width: 80%;
+  max-width: 100px;
 }
 .favorite_text {
   margin-top: 30px;
@@ -269,7 +294,7 @@ main {
   }
   .design_wrap,
   .coding_wrap {
-    width: 70%;
+    width: 80%;
   }
   .design_content dt,
   .coding_content dt {
@@ -292,5 +317,15 @@ main {
   .favorite_content_wrap {
     flex-direction: column;
     align-items: center;
+  }
+  .favorite_photo .fa_icon {
+    max-width: none;
+  }
+  .fa_img {
+    width: 80%;
+  }
+  .favorite_content {
+    width: 50%;
+    margin-bottom: 85px;
   }
 }

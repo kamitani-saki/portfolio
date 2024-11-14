@@ -14,7 +14,7 @@ header {
 .works_background_line {
   width: 2500px;
   position: absolute;
-  top: 0;
+  top: 165px;
   right: 0;
 }
 .works_background_line svg {
