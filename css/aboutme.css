@@ -20,16 +20,23 @@ header {
 .aboutme_head {
   margin-top: 80px;
 }
-.aboutme_background_line1 {
+.background_line {
+  position: relative;
+  height: 800px;
+}
+.aboutme_background_line1,
+.aboutme_background_line2 {
   width: 2500px;
   position: absolute;
   top: 0;
   right: 0;
 }
-.aboutme_background_line1 svg {
+.aboutme_background_line1 svg,
+.aboutme_background_line2 svg {
   width: 100%;
 }
-.aboutme_background_line1 svg image {
+.aboutme_background_line1 svg image,
+.aboutme_background_line2 svg image {
   width: 100%;
   transform: translateX(calc((2500px - 100%) / 2));
 }

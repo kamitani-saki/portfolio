@@ -164,19 +164,21 @@
                 </dl>
             </section> -->
 
+            <div class="background_line">
+                <div class="aboutme_background_line2">
 
-            <div class="aboutme_background_line2">
-
-                <svg id="mask4" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1927.95" height="953.5"
-                    viewBox="0 0 1927.95 953.5" style="enable-background:new 0 0 1927.95 953.5;" xml:space="preserve">
-                    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/about_line2.svg"
-                        width="1927.95" height="953.5" mask="url(#clipmask4)"></image>
-                    <mask id="clipmask4" maskUnits="objectBoundingBox">
-                        <path data-delay="0" class="st4"
-                            d="M1925.02,119.41S1774.16-9.73,1617.07,5.8s-194.77,199.16-242.11,266.38-143.47,81.78-297.17-10.95-267.32-6.58-329.71,39.57c-66.3,49.04-243.62,330.33-251.1,335.81s-106.94,209.28-289.06,265.73S21.25,946.9.46,949.02" />
-                    </mask>
-                </svg>
+                    <svg id="mask4" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1927.95" height="953.5"
+                        viewBox="0 0 1927.95 953.5" style="enable-background:new 0 0 1927.95 953.5;"
+                        xml:space="preserve">
+                        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/about_line2.svg"
+                            width="1927.95" height="953.5" mask="url(#clipmask4)"></image>
+                        <mask id="clipmask4" maskUnits="objectBoundingBox">
+                            <path data-delay="0" class="st4"
+                                d="M1925.02,119.41S1774.16-9.73,1617.07,5.8s-194.77,199.16-242.11,266.38-143.47,81.78-297.17-10.95-267.32-6.58-329.71,39.57c-66.3,49.04-243.62,330.33-251.1,335.81s-106.94,209.28-289.06,265.73S21.25,946.9.46,949.02" />
+                        </mask>
+                    </svg>
+                </div>
             </div>
             <section class="favorite">
                 <div class="favorite_head center">
@@ -268,23 +270,17 @@
             animTimingFunction: Vivus.EASE,//動きの加速減速設定
         }
         );
-        window.addEventListener("scroll", function () {
-            // ウィンドウがスクロールされている量を取得する
-            const scroll3 = window.scrollY;
-            console.log(scroll)
-            // 要素の一番上のラインがトップから見てどこに配置されているかを取得
-            const worksTop3 = document.querySelector(".introduction").getBoundingClientRect().top
-            // スクロールされた量が、要素の一番上のラインより大きくなったら、実行
-            if (scroll3 > worksTop3) {
-                stroke3.play()
-            }
+        $(window).on('load', function () {
+
+            stroke3.play();//SVGアニメーションの実行
         });
+
         window.addEventListener("scroll", function () {
             // ウィンドウがスクロールされている量を取得する
             const scroll4 = window.scrollY;
             console.log(scroll)
             // #worksの一番上のラインがトップから見てどこに配置されているかを取得
-            const worksTop4 = document.querySelector(".favorite").getBoundingClientRect().top
+            const worksTop4 = document.querySelector(".skill").getBoundingClientRect().bottom
             // スクロールされた量が、#worksの一番上のラインより大きくなったら、実行
             if (scroll4 > worksTop4) {
                 stroke4.play()
