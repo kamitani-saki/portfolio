@@ -21,14 +21,6 @@ const changeVisibility = () => {
 }
 //======SVGアニメーションの描画
 
-
-
-
-
-
-
-
-
 //======== キャッチコピーの浮き出る文字
 function BlurTextAnimeControl() {
     $('.slideConts').each(function () {
@@ -94,7 +86,9 @@ const mySwiper = new Swiper('.swiper', {
     pagination: {
     el: '.swiper-pagination',
     type: "progressbar",
-    }
+    },
+    touchRatio: 1, // タッチ操作を有効化
+    simulateTouch: true, // モバイルでタッチ操作をシミュレート
     });
 // ========スクロールしたら現れるtoppageボタン
 //pagetop
