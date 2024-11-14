@@ -925,6 +925,13 @@ small {
   .works_title {
     text-align: left;
   }
+  .woks_all {
+    width: 80%;
+    max-width: none;
+  }
+  .works_head {
+    width: fit-content;
+  }
   .works_button span::before,
   .aboutme_button span::before,
   .toppage_button span::before,
@@ -938,7 +945,13 @@ small {
   .works_all_btn {
     gap: 18px;
   }
-
+  .swiper-slide {
+    width: 235px;
+  }
+  .works_content {
+    width: 100%;
+    max-width: none;
+  }
   /* .works_button,
   .aboutme_button,
   .toppage_button {
