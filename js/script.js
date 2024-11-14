@@ -22,31 +22,13 @@ const changeVisibility = () => {
 //======SVGアニメーションの描画
 
 
-// var stroke5;
-// stroke5 = new Vivus('mask5', {//アニメーションをするIDの指定
-//     start: 'manual',//自動再生をせずスタートをマニュアルに
-//     type: 'scenario-sync',// アニメーションのタイプを設定
-//     duration:300,//アニメーションの時間設定。数字が小さくなるほど速い
-//     forceRender: false,//パスが更新された場合に再レンダリングさせない
-//     animTimingFunction: Vivus.EASE,//動きの加速減速設定
-// }
-// );
 
 
 
 
 
-//   window.addEventListener("scroll", function () {
-//     // ウィンドウがスクロールされている量を取得する
-//     const scroll5 = window.scrollY;
-//     console.log(scroll)
-//     // #worksの一番上のラインがトップから見てどこに配置されているかを取得
-//     const worksTop5 = document.querySelector(".works_main").getBoundingClientRect().top
-//     // スクロールされた量が、#worksの一番上のラインより大きくなったら、実行
-//     if (scroll5 > worksTop5) {
-//       stroke5.play()
-//     }
-//   });
+
+
 //======== キャッチコピーの浮き出る文字
 function BlurTextAnimeControl() {
     $('.slideConts').each(function () {

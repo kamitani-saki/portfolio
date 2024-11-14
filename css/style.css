@@ -557,7 +557,8 @@ textarea {
   padding: 5px 10px;
   box-sizing: border-box;
   border-radius: 37px;
-  border: solid 1px;
+  border: solid 1px #555555;
+  color: #555;
 }
 .btn:active,
 .btn:hover {

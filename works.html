@@ -154,6 +154,20 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- scriptファイル -->
     <script src="./js/script.js"></script>
+    <script>
+        var stroke5;
+        stroke5 = new Vivus('mask5', {//アニメーションをするIDの指定
+            start: 'manual',//自動再生をせずスタートをマニュアルに
+            type: 'scenario-sync',// アニメーションのタイプを設定
+            duration: 300,//アニメーションの時間設定。数字が小さくなるほど速い
+            forceRender: false,//パスが更新された場合に再レンダリングさせない
+            animTimingFunction: Vivus.EASE,//動きの加速減速設定
+        }
+        );
+        $(window).on('load', function () {
+            stroke5.play();//SVGアニメーションの実行
+        });
+    </script>
 
 </body>
 
