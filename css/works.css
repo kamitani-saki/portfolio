@@ -11,7 +11,19 @@ header {
   background-image: none;
   height: auto;
 }
-
+.works_background_line {
+  width: 2500px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.works_background_line svg {
+  width: 100%;
+}
+.works_background_line svg image {
+  width: 100%;
+  transform: translateX(calc((2500px - 100%) / 2));
+}
 .works_head {
   margin-top: 80px;
 }
@@ -20,6 +32,8 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 235px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .workspage_content {
   width: 540px;

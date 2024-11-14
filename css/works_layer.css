@@ -21,6 +21,10 @@ main {
   background-repeat: no-repeat;
   background-position: -500px 1800px;
 }
+.works_lay_main {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 h3 {
   margin-top: 250px;
   padding-bottom: 20px;
@@ -28,9 +32,11 @@ h3 {
   border-bottom: 1px solid;
   font-size: 24px;
   font-weight: 400;
+  margin-left: 100px;
 }
 .details_table {
   width: 700px;
+  max-width: 100%;
   height: fit-content;
   background-color: #fbf3f4;
   margin-top: 200px;
@@ -38,7 +44,6 @@ h3 {
 .detail {
   display: flex;
   justify-content: space-evenly;
-
   padding: 22px 4px;
 }
 .detail:not(:last-child) {
@@ -52,7 +57,7 @@ dd {
 }
 .page_selection {
   margin: 140px auto 0;
-  width: 725px;
+  width: 80%;
   display: flex;
   justify-content: space-between;
 }
@@ -71,11 +76,9 @@ dd {
   padding-bottom: 8px;
   border-bottom: solid 1px;
 }
-.page_selection img {
-  width: 48px;
-}
+
 .capture_pc {
-  width: 725px;
+  width: 80%;
   height: fit-content;
   margin-top: 110px;
 }
@@ -84,8 +87,17 @@ dd {
 }
 .works_lay_photo {
   text-align: center;
-  margin-top: 140px;
+  margin-top: 50px;
 }
 .works_lay_photo img {
-  width: 800px;
+  width: 80%;
+}
+@media screen and (max-width: 767px) {
+  .details_table {
+    width: 70%;
+  }
+  h3 {
+    margin-left: 10px;
+    margin-top: 170px;
+  }
 }

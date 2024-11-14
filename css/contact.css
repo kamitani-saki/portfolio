@@ -16,8 +16,12 @@ header {
   border: solid 1px #d48d95;
   color: #ffffff;
 }
-.contact_head {
+.contact_header {
   margin-top: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 225px;
 }
 .message {
   margin-top: 10px;
@@ -54,4 +58,10 @@ header {
   margin-top: -700px;
   position: relative;
   z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  .contact_main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

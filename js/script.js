@@ -47,6 +47,33 @@ stroke2 = new Vivus('mask2', {//アニメーションをするIDの指定
     animTimingFunction: Vivus.EASE,//動きの加速減速設定
 }
 );
+// var stroke3;
+// stroke3 = new Vivus('mask3', {//アニメーションをするIDの指定
+//     start: 'manual',//自動再生をせずスタートをマニュアルに
+//     type: 'scenario-sync',// アニメーションのタイプを設定
+//     duration:300,//アニメーションの時間設定。数字が小さくなるほど速い
+//     forceRender: false,//パスが更新された場合に再レンダリングさせない
+//     animTimingFunction: Vivus.EASE,//動きの加速減速設定
+// }
+// );
+// var stroke4;
+// stroke4 = new Vivus('mask4', {//アニメーションをするIDの指定
+//     start: 'manual',//自動再生をせずスタートをマニュアルに
+//     type: 'scenario-sync',// アニメーションのタイプを設定
+//     duration:300,//アニメーションの時間設定。数字が小さくなるほど速い
+//     forceRender: false,//パスが更新された場合に再レンダリングさせない
+//     animTimingFunction: Vivus.EASE,//動きの加速減速設定
+// }
+// );
+// var stroke5;
+// stroke5 = new Vivus('mask5', {//アニメーションをするIDの指定
+//     start: 'manual',//自動再生をせずスタートをマニュアルに
+//     type: 'scenario-sync',// アニメーションのタイプを設定
+//     duration:300,//アニメーションの時間設定。数字が小さくなるほど速い
+//     forceRender: false,//パスが更新された場合に再レンダリングさせない
+//     animTimingFunction: Vivus.EASE,//動きの加速減速設定
+// }
+// );
 
 $(window).on('load',function(){
     $("#splash").delay(600).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
@@ -69,14 +96,46 @@ window.addEventListener("scroll", function () {
     // ウィンドウがスクロールされている量を取得する
     const scroll2 = window.scrollY;
     console.log(scroll)
-    // #worksの一番上のラインがトップから見てどこに配置されているかを取得
+    // 要素の一番上のラインがトップから見てどこに配置されているかを取得
     const worksTop2 = document.querySelector("#contact").getBoundingClientRect().top
-    // スクロールされた量が、#worksの一番上のラインより大きくなったら、実行
+    // スクロールされた量が、要素の一番上のラインより大きくなったら、実行
     if (scroll2 > worksTop2) {
       stroke2.play()
     }
   });
-
+  window.addEventListener("scroll", function () {
+    // ウィンドウがスクロールされている量を取得する
+    const scroll3 = window.scrollY;
+    console.log(scroll)
+    // 要素の一番上のラインがトップから見てどこに配置されているかを取得
+    const worksTop3 = document.querySelector(".introduction").getBoundingClientRect().top
+    // スクロールされた量が、要素の一番上のラインより大きくなったら、実行
+    if (scroll3 > worksTop3) {
+      stroke3.play()
+    }
+  });
+  window.addEventListener("scroll", function () {
+    // ウィンドウがスクロールされている量を取得する
+    const scroll4 = window.scrollY;
+    console.log(scroll)
+    // #worksの一番上のラインがトップから見てどこに配置されているかを取得
+    const worksTop4 = document.querySelector(".favorite").getBoundingClientRect().top
+    // スクロールされた量が、#worksの一番上のラインより大きくなったら、実行
+    if (scroll4 > worksTop4) {
+      stroke4.play()
+    }
+  });
+  window.addEventListener("scroll", function () {
+    // ウィンドウがスクロールされている量を取得する
+    const scroll5 = window.scrollY;
+    console.log(scroll)
+    // #worksの一番上のラインがトップから見てどこに配置されているかを取得
+    const worksTop5 = document.querySelector(".works_main").getBoundingClientRect().top
+    // スクロールされた量が、#worksの一番上のラインより大きくなったら、実行
+    if (scroll5 > worksTop5) {
+      stroke5.play()
+    }
+  });
 //======== キャッチコピーの浮き出る文字
 function BlurTextAnimeControl() {
     $('.slideConts').each(function () {

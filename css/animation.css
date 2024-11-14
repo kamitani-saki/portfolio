@@ -58,10 +58,13 @@
 /*========= SVG操作手書き風にするためのCSS ===============*/
 #mask .st0,
 #mask1 .st1,
-#mask2 .st2 {
+#mask2 .st2,
+#mask3 .st3,
+#mask4 .st4,
+#mask5 .st5 {
   fill: none;
   stroke: #fff;
-  stroke-width: 20; /*線の太さを指定する*/
+  stroke-width: 30; /*線の太さを指定する*/
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;

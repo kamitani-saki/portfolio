@@ -344,10 +344,7 @@ header {
   position: relative;
   padding-left: 10px;
 }
-.works_background_line {
-  margin-top: 300px;
-  z-index: 300;
-}
+
 .works_all {
   padding-left: 10px;
   padding-right: 10px;
@@ -356,7 +353,7 @@ header {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  align-items: flex-start;
+  align-items: center;
 }
 .works_title {
   text-align: center;
@@ -428,6 +425,7 @@ header {
   width: fit-content;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
 }
 .aboutme_photo {
   width: 410px;
@@ -439,7 +437,7 @@ header {
   width: 100%;
 }
 .aboutme_description {
-  width: 410px;
+  width: 52%;
   background-color: #e1afb5;
   border-radius: 15px;
   margin-left: -30px;
@@ -453,7 +451,7 @@ header {
   box-sizing: border-box;
 }
 .aboutme_text {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.9;
   color: white;
 }
@@ -467,6 +465,7 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: 10%;
+  z-index: 100;
 }
 .contact_head {
   display: flex;
@@ -534,9 +533,10 @@ textarea {
 }
 .contact_background_line {
   position: absolute;
-  top: 235px;
-  right: 0;
+  top: 4800px;
+  right: 0px;
   width: 2500px;
+  z-index: 1;
 }
 .contact_background_line svg {
   width: 100%;
@@ -573,12 +573,14 @@ textarea {
   margin-top: 325px;
 }
 .footer_menu {
-  width: 414px;
   margin: 0 auto;
+  width: 800px;
+  max-width: 50%;
 }
 .footer_menu ul {
   display: flex;
   gap: 81px;
+  justify-content: space-between;
 }
 small {
   display: block;
@@ -670,6 +672,46 @@ small {
 }
 
 @media screen and (max-width: 1200px) {
+  .contact {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+  .contact_description {
+    text-align: left;
+    font-size: 14px;
+    margin-left: 0;
+    line-height: 1.8;
+  }
+  .contact_head {
+    flex-direction: row;
+  }
+  .contact_wrap {
+    width: 80%;
+  }
+
+  input[type="text"],
+  input[type="furigana"],
+  input[type="phone"],
+  input[type="email"] {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+    height: 200px;
+  }
+  .btn {
+    width: 60%;
+  }
+  .page_top {
+    right: -35px;
+  }
+}
+@media screen and (max-width: 810px) {
+  .concept_text {
+    font-size: 3.03797468354vw;
+  }
+}
+@media screen and (max-width: 767px) {
   /* ナビ */
   /* PC版メニュー 非表示にする*/
   .pc_header_menu,
@@ -811,46 +853,6 @@ small {
   .catch_copy_lo {
     right: -2%;
   }
-  .contact {
-    margin-left: 36px;
-    margin-right: 36px;
-  }
-  .contact_description {
-    text-align: left;
-    font-size: 14px;
-    margin-left: 0;
-    line-height: 1.8;
-  }
-  .contact_head {
-    flex-direction: row;
-  }
-  .contact_wrap {
-    width: 80%;
-  }
-
-  input[type="text"],
-  input[type="furigana"],
-  input[type="phone"],
-  input[type="email"] {
-    width: 100%;
-  }
-  textarea {
-    width: 100%;
-    height: 200px;
-  }
-  .btn {
-    width: 60%;
-  }
-  .page_top {
-    right: -35px;
-  }
-}
-@media screen and (max-width: 785px) {
-  .concept_text {
-    font-size: 3.03797468354vw;
-  }
-}
-@media screen and (max-width: 810px) {
   #mask2 {
     display: block;
   }
@@ -983,5 +985,12 @@ small {
   .page_top {
     right: -6%;
     bottom: 8%;
+  }
+  .footer_menu {
+    width: 80%;
+    max-width: none;
+  }
+  .footer_menu ul {
+    gap: 2%;
   }
 }

@@ -1,7 +1,7 @@
 @charset "utf-8";
-/* html {
+html {
   overflow-x: hidden;
-} */
+}
 body {
   background-image: url(../images/top_background2-100.jpg),
     url(../images/top_background1-100.jpg);
@@ -14,19 +14,34 @@ header {
   background-image: none;
   height: auto;
 }
-
+.aboutme_main {
+  position: relative;
+}
 .aboutme_head {
   margin-top: 80px;
 }
-
+.aboutme_background_line1 {
+  width: 2500px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.aboutme_background_line1 svg {
+  width: 100%;
+}
+.aboutme_background_line1 svg image {
+  width: 100%;
+  transform: translateX(calc((2500px - 100%) / 2));
+}
 .introduction {
   margin: 250px auto 0;
   width: fit-content;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
 }
 .introduction_wrap {
-  width: 705px;
+  width: 58%;
   background-color: #e1afb5;
   border-radius: 15px;
   margin-left: -30px;
@@ -35,7 +50,7 @@ header {
   z-index: 1;
 }
 .introduction_text_wrap {
-  padding: 50px 0 50px 110px;
+  padding: 50px 0 50px 100px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -58,13 +73,17 @@ header {
   line-height: 1.9;
 }
 .introduction_photo {
-  width: 470px;
+  width: 38%;
   position: relative;
   z-index: 10;
 }
 .introduction_photo img {
   border-radius: 15px;
   width: 100%;
+}
+.skill {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .skill_head,
 .strong_head,
@@ -89,7 +108,7 @@ header {
 }
 .design_content,
 .coding_content {
-  width: 460px;
+  width: 80%;
   text-align: center;
   margin: 0 auto;
 }
@@ -107,16 +126,19 @@ header {
 .coding_content dd {
   margin: 30px auto 0;
   font-size: 16px;
-  width: 460px;
+  width: 80%;
+  text-align: left;
 }
 .strongs {
   position: relative;
   z-index: 100;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .skill_icon {
   display: flex;
   gap: 13px;
-  width: 460px;
+  width: 80%;
   text-align: left;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -161,10 +183,13 @@ header {
 .favorite_content_wrap {
   margin-top: 145px;
   display: flex;
+  gap: 3%;
   justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .favorite_content {
-  width: 245px;
+  width: 31%;
   text-align: center;
 }
 .favorite_title,
@@ -175,34 +200,22 @@ header {
 .favorite_photo {
   margin-top: 48px;
 }
+.favorite_photo .fa_icon {
+  height: 90px;
+}
 .favorite_text {
   margin-top: 30px;
+  text-align: left;
 }
 .fa_img {
   margin-top: 30px;
+  width: 80%;
 }
 
-.aboutme_background_line1,
-.aboutme_background_line2 {
-  position: relative;
-  z-index: 1;
-}
-.aboutme_background_line1 img {
-  position: absolute;
-  width: 2500px;
-  top: -300px;
-  right: -100px;
-}
-.aboutme_background_line2 img {
-  position: absolute;
-  width: 2500px;
-  bottom: -300px;
-  right: -700px;
-}
 main {
   background-image: url(../images/top_background_left-100.jpg);
   background-repeat: no-repeat;
-  background-position: -400px 1800px;
+  background-position: -400px 1200px;
 }
 @media screen and (max-width: 767px) {
   .aboutme_head {
@@ -210,16 +223,60 @@ main {
   }
   .aboutme_main {
     margin-left: 36px;
+    margin-right: 36px;
   }
 
   .introduction {
     flex-direction: column-reverse;
+    width: 100%;
   }
   .introduction_photo {
-    width: 213px;
+    width: 50%;
     margin: 0 auto;
   }
   .introduction_wrap {
-    width: 300px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: -70px;
+  }
+  .introduction_text_wrap {
+    padding: 100px 10px 50px;
+  }
+  .name_head {
+    justify-content: center;
+  }
+  .name_text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .skill_head,
+  .favorite_head {
+    margin: 280px 0 0 0;
+  }
+  .skill_wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .design_wrap,
+  .coding_wrap {
+    width: 70%;
+  }
+  .design_content dt,
+  .coding_content dt {
+    font-size: 18px;
+  }
+  .design_content dt,
+  .coding_content dt {
+    font-size: 24px;
+  }
+  .design_icon,
+  .coding_icon {
+    width: 50%;
+  }
+  .strong_head {
+    margin: 260px 0 160px;
+  }
+  .favorite_text {
+    font-size: 14px;
   }
 }
