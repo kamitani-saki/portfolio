@@ -76,6 +76,20 @@
                 </svg>
             </div>
         </div>
+        <div class="background_line_sp">
+            <div class="contact_bg_line_sp">
+                <svg id="mask_sp3" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="774.75" height="331.27"
+                    viewBox="0 0 774.75 331.27" style="enable-background:new 0 0 774.75 331.27;" xml:space="preserve">
+                    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/contact_line_sp.svg"
+                        width="774.75" height="331.27" mask="url(#clipmask_sp3)"></image>
+                    <mask id="clipmask_sp3" maskUnits="objectBoundingBox">
+                        <path data-delay="0" class="st_sp3"
+                            d="M3.01,56.04S50.22,2.07,92.08,4.05s79.74,1.86,86.95,36.77c0,0-3.22,17.77-24.31,31.7s-41.82,46.45-5.64,74.53c0,0,124.08,43.54,132.26,79.16s-29.58,53.11,31.2,87.24c0,0,44.66,13.97,97.79,6.76s129.62-23.48,167.61-11.7,109.99,18.58,109.99,18.58c0,0,71.95,2.25,83.99-9.66" />
+                    </mask>
+                </svg>
+            </div>
+        </div>
         <div class="message">
             <h3 class="thanks fadein fadein-bottom">お問い合わせ<br class="sp_br">ありがとうございます</h3>
             <p class="thanks_text fadein fadein-bottom">このたびは、お問い合わせいただき<br class="sp_br">ありがとうございます。<br>
@@ -126,6 +140,18 @@
         );
         $(window).on('load', function () {
             stroke6.play();//SVGアニメーションの実行
+        });
+        var stroke_sp3;
+        stroke_sp3 = new Vivus('mask_sp3', {//アニメーションをするIDの指定
+            start: 'manual',//自動再生をせずスタートをマニュアルに
+            type: 'scenario-sync',// アニメーションのタイプを設定
+            duration: 300,//アニメーションの時間設定。数字が小さくなるほど速い
+            forceRender: false,//パスが更新された場合に再レンダリングさせない
+            animTimingFunction: Vivus.EASE,//動きの加速減速設定
+        }
+        );
+        $(window).on('load', function () {
+            stroke_sp3.play();//SVGアニメーションの実行
         });
     </script>
 </body>

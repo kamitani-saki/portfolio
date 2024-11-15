@@ -64,7 +64,8 @@
 #mask5 .st5,
 #mask6 .st6,
 #mask_sp1 .st_sp1,
-#mask_sp2 .st_sp2 {
+#mask_sp2 .st_sp2,
+#mask_sp3 .st_sp3 {
   fill: none;
   stroke: #fff;
   stroke-width: 30; /*線の太さを指定する*/

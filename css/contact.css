@@ -81,7 +81,24 @@ header {
   position: relative;
   z-index: 100;
 }
+.background_line_sp {
+  display: none;
+}
 @media screen and (max-width: 767px) {
+  .background_line {
+    display: none;
+  }
+  .background_line_sp {
+    display: block;
+    position: relative;
+    height: 10px;
+  }
+  .contact_bg_line_sp {
+    width: 1000px;
+    position: absolute;
+    top: 165px;
+    left: 0;
+  }
   .contact_main {
     padding-left: 10px;
     padding-right: 10px;
