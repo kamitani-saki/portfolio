@@ -343,6 +343,7 @@ header {
 .works {
   position: relative;
   padding-left: 10px;
+  margin-top: 250px;
 }
 
 .works_all {
@@ -545,6 +546,24 @@ textarea {
   width: 100%;
   transform: translateX(calc((2500px - 100%) / 2));
 }
+.works_line {
+  position: relative;
+  height: 100px;
+}
+.works_background_line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2500px;
+  z-index: 1;
+}
+.works_background_line svg {
+  width: 100%;
+}
+.works_background_line svg image {
+  width: 100%;
+  transform: translateX(calc(-500px));
+}
 
 .sp_br {
   display: none;
@@ -671,7 +690,7 @@ small {
 .sp_logo {
   display: none;
 }
-.works_background_line_sp,
+
 .sp_lo {
   display: none;
 }
@@ -716,12 +735,6 @@ small {
   }
 }
 @media screen and (max-width: 767px) {
-  .works_background_line_sp {
-    display: block;
-  }
-  .works_background_line {
-    display: none;
-  }
   #splash_logo {
     width: 1000px;
     top: -300px;
@@ -972,11 +985,10 @@ small {
     width: 100%;
     max-width: none;
   }
-  /* .works_button,
-  .aboutme_button,
-  .toppage_button {
-    padding-left: 58px;
-  } */
+  .works_background_line {
+    width: 1000px;
+  }
+
   .page_top span::before {
     height: 35px;
     width: 35px;

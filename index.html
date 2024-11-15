@@ -131,29 +131,20 @@
 
                 </p>
             </section>
-            <div class="works_background_line">
-                <svg id="mask1" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1965.61" height="300.81"
-                    viewBox="0 0 1965.61 300.81" style="enable-background:new 0 0 1965.61 300.81;" xml:space="preserve">
-                    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/top_line1.svg"
-                        width="1965.61" height="300.81" mask="url(#clipmask1)"></image>
-                    <mask id="clipmask1" maskUnits="objectBoundingBox">
-                        <path data-delay="0" class="st1"
-                            d="M3.44,209.75S158.29,26.44,456.53,6.27c248.87-19.29,285.21,123.63,487.77,220.38,224.34,85.32,344.15-69.95,896.2,45.95,31.39,6.86,124.3,23.78,124.3,23.78" />
-                    </mask>
-                </svg>
-            </div>
-            <div class="works_background_line_sp">
-                <svg id="mask_sp2" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="770.28" height="120.6"
-                    viewBox="0 0 770.28 120.6" style="enable-background:new 0 0 770.28 120.6;" xml:space="preserve">
-                    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/toppage_line_sp2.svg"
-                        width="770.28" height="120.6" mask="url(#clipmask_sp2)"></image>
-                    <mask id="clipmask_sp2" maskUnits="objectBoundingBox">
-                        <path data-delay="0" class="st_sp2"
-                            d="M2.97,85.1S65.26,15.99,144.28,7.68c53.06-5.58,97.11-11.84,158.5,38.71,61.45,50.59,89.84,57.33,177.37,51.48s129.08-12.46,199.22,2.34,90.6,16.4,90.6,16.4" />
-                    </mask>
-                </svg>
+            <div class="works_line">
+                <div class="works_background_line">
+                    <svg id="mask1" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1965.61" height="300.81"
+                        viewBox="0 0 1965.61 300.81" style="enable-background:new 0 0 1965.61 300.81;"
+                        xml:space="preserve">
+                        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/top_line1.svg"
+                            width="1965.61" height="300.81" mask="url(#clipmask1)"></image>
+                        <mask id="clipmask1" maskUnits="objectBoundingBox">
+                            <path data-delay="0" class="st1"
+                                d="M3.44,209.75S158.29,26.44,456.53,6.27c248.87-19.29,285.21,123.63,487.77,220.38,224.34,85.32,344.15-69.95,896.2,45.95,31.39,6.86,124.3,23.78,124.3,23.78" />
+                        </mask>
+                    </svg>
+                </div>
             </div>
             <section id="works" class="works">
 
@@ -370,8 +361,9 @@ cookie.js"></script>
             animTimingFunction: Vivus.EASE,//動きの加速減速設定
         }
         );
-        // var stroke3;
-        // stroke3 = new Vivus('mask_sp1', {//アニメーションをするIDの指定
+
+        // var stroke4;
+        // stroke4 = new Vivus('mask_sp2', {//アニメーションをするIDの指定
         //     start: 'manual',//自動再生をせずスタートをマニュアルに
         //     type: 'scenario-sync',// アニメーションのタイプを設定
         //     duration: 300,//アニメーションの時間設定。数字が小さくなるほど速い
@@ -379,15 +371,6 @@ cookie.js"></script>
         //     animTimingFunction: Vivus.EASE,//動きの加速減速設定
         // }
         // );
-        var stroke4;
-        stroke4 = new Vivus('mask_sp2', {//アニメーションをするIDの指定
-            start: 'manual',//自動再生をせずスタートをマニュアルに
-            type: 'scenario-sync',// アニメーションのタイプを設定
-            duration: 300,//アニメーションの時間設定。数字が小さくなるほど速い
-            forceRender: false,//パスが更新された場合に再レンダリングさせない
-            animTimingFunction: Vivus.EASE,//動きの加速減速設定
-        }
-        );
         $(window).on('load', function () {
             $("#splash").delay(5000).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
             $("#splash_logo").delay(5000).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
@@ -420,17 +403,17 @@ cookie.js"></script>
             $("#splash_logo").delay(6000).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
             stroke3.play();//SVGアニメーションの実行
         });
-        window.addEventListener("scroll", function () {
-            // ウィンドウがスクロールされている量を取得する
-            const scroll4 = window.scrollY;
-            console.log(scroll4)
-            // #worksの一番上のラインがトップから見てどこに配置されているかを取得
-            const worksTop4 = document.querySelector("#works").getBoundingClientRect().top
-            // スクロールされた量が、#worksの一番上のラインより大きくなったら、実行
-            if (scroll4 > worksTop4) {
-                stroke4.play()
-            }
-        });
+        // window.addEventListener("scroll", function () {
+        //     // ウィンドウがスクロールされている量を取得する
+        //     const scroll4 = window.scrollY;
+        //     console.log(scroll4)
+        //     // #worksの一番上のラインがトップから見てどこに配置されているかを取得
+        //     const worksTop4 = document.querySelector("#works").getBoundingClientRect().top
+        //     // スクロールされた量が、#worksの一番上のラインより大きくなったら、実行
+        //     if (scroll4 > worksTop4) {
+        //         stroke4.play()
+        //     }
+        // });
     </script>
     <!-- googleフォーム用ファイル -->
     <script type="text/javascript">
