@@ -904,20 +904,20 @@ small {
     width: 1000px;
   }
   .concept {
-    margin-left: 36px;
+    margin-left: 10px;
   }
   .concept_text {
     font-size: 16px;
   }
   .scroll1::after {
-    height: 240px;
-    margin-top: -240px;
+    height: 375px;
+    margin-top: -375px;
   }
   .scroll1::before {
-    height: 240px;
+    height: 375px;
   }
   .scroll1 {
-    height: 240px;
+    height: 375px;
   }
   .works {
     margin-left: 36px;
@@ -928,6 +928,7 @@ small {
   .woks_all {
     width: 80%;
     max-width: none;
+    margin: 0;
   }
   .works_head {
     width: 100%;
@@ -983,13 +984,13 @@ small {
     margin-right: auto;
   }
   .aboutme_photo {
-    width: 56%;
+    width: 65%;
   }
   .aboutme_photo img {
     border-radius: 10px;
   }
   .aboutme_description {
-    width: 80%;
+    width: 100%;
     margin: -150px 0 0 0;
     border-radius: 10px;
   }
@@ -1021,13 +1022,6 @@ small {
   }
 }
 @media screen and (max-width: 572px) {
-  .scroll1::before {
-    height: 280px;
-  }
-  .scroll1::after {
-    height: 280px;
-    margin-top: -280px;
-  }
 }
 @media screen and (max-width: 500px) {
   .catch_copy {
@@ -1042,23 +1036,16 @@ small {
   }
 }
 @media screen and (max-width: 364px) {
-  .scroll1::before {
-    height: 330px;
-  }
-  .scroll1::after {
-    height: 330px;
-    margin-top: -330px;
-  }
   .page_top {
     right: -14%;
   }
 }
-@media screen and (max-width: 348px) {
+@media screen and (max-width: 340px) {
   .scroll1::before {
-    height: 380px;
+    height: 425px;
   }
   .scroll1::after {
-    height: 380px;
-    margin-top: -380px;
+    height: 425px;
+    margin-top: -425px;
   }
 }

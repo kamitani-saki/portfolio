@@ -65,7 +65,7 @@ header {
   z-index: 1;
 }
 .introduction_text_wrap {
-  padding: 50px 0 50px 100px;
+  padding: 50px 5px 50px 100px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -254,6 +254,23 @@ main {
   background-repeat: no-repeat;
   background-position: -400px 1200px;
 }
+@media screen and (max-width: 840px) {
+  .name_head {
+    display: block;
+  }
+  .name_eg {
+    margin-top: 10px;
+  }
+  .name_jp {
+    font-size: 24px;
+  }
+  .name_eg {
+    font-size: 20px;
+  }
+  .introduction_text_wrap {
+    padding: 50px 5px 50px 70px;
+  }
+}
 @media screen and (max-width: 767px) {
   .aboutme_head {
     margin: 160px 0 0 0;
@@ -272,16 +289,14 @@ main {
     margin: 0 auto;
   }
   .introduction_wrap {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-top: -70px;
   }
   .introduction_text_wrap {
-    padding: 100px 10px 50px;
+    padding: 100px 55px 50px;
   }
-  .name_head {
-    justify-content: center;
-  }
+
   .name_text {
     padding-left: 20px;
     padding-right: 20px;
@@ -296,7 +311,7 @@ main {
   }
   .design_wrap,
   .coding_wrap {
-    width: 80%;
+    width: 100%;
   }
   .design_content dt,
   .coding_content dt {
@@ -335,10 +350,10 @@ main {
     font-size: 14px;
   }
   .name_jp {
-    font-size: 18px;
+    font-size: 20px;
   }
   .name_eg {
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 4px;
   }
   .name_text {
@@ -349,7 +364,4 @@ main {
   }
 }
 @media screen and (max-width: 565px) {
-  .name_head {
-    display: block;
-  }
 }

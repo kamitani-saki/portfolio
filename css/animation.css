@@ -78,19 +78,16 @@
 /* スクロールダウンの位置 */
 .scroll1 {
   width: 1px;
-  height: 345px;
+  height: 490px;
 }
 /* 線のアニメーション部分 */
 .scroll1::before {
   display: block;
   animation: scroll1 2s infinite linear;
   background-color: #555555;
-
   content: "";
-  height: 345px;
-
+  height: 490px;
   margin: auto;
-
   width: 1.5px;
   z-index: 2;
 }
@@ -98,11 +95,9 @@
 .scroll1::after {
   display: block;
   background-color: #e7e4e4;
-
   content: "";
-  height: 345px;
-
-  margin-top: -345px;
+  height: 490px;
+  margin-top: -490px;
 
   width: 1.5px;
 }
