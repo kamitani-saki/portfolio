@@ -671,7 +671,10 @@ small {
 .sp_logo {
   display: none;
 }
-
+.works_background_line_sp,
+.sp_lo {
+  display: none;
+}
 @media screen and (max-width: 1200px) {
   .contact {
     margin-left: 36px;
@@ -713,6 +716,20 @@ small {
   }
 }
 @media screen and (max-width: 767px) {
+  .works_background_line_sp {
+    display: block;
+  }
+  .works_background_line {
+    display: none;
+  }
+  #splash_logo {
+    width: 1000px;
+    top: -300px;
+  }
+  .catch_copy_lo {
+    top: 55%;
+    right: -40px;
+  }
   /* ナビ */
   /* PC版メニュー 非表示にする*/
   .pc_header_menu,
@@ -851,9 +868,7 @@ small {
     width: 270px;
     right: 70px;
   }
-  .catch_copy_lo {
-    right: -2%;
-  }
+
   #mask2 {
     display: block;
   }
@@ -1028,7 +1043,7 @@ small {
     width: 180px;
   }
   .catch_copy_main {
-    margin: 0 auto 0 45px;
+    /* margin: 0 auto 0 45px; */
     font-size: 30px;
   }
   .page_top {
