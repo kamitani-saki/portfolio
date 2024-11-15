@@ -103,8 +103,9 @@
                         </a>
                     </div>
                     <div class="top_background_line">
-                        <img src="./images/top_line0-1.svg" alt="流れる糸1">
+                        <img src="./images/top_line0-1.svg" alt="流れる糸">
                     </div>
+
                     <div class="catch_copy">
                         <div class="catch_copy_main">
                             <p>「想い」を</p><br>
@@ -346,7 +347,7 @@ cookie.js"></script>
         stroke = new Vivus('mask', {//アニメーションをするIDの指定
             start: 'manual',//自動再生をせずスタートをマニュアルに
             type: 'scenario-sync',// アニメーションのタイプを設定
-            duration: 500,//アニメーションの時間設定。数字が小さくなるほど速い
+            duration: 300,//アニメーションの時間設定。数字が小さくなるほど速い
             forceRender: false,//パスが更新された場合に再レンダリングさせない
             animTimingFunction: Vivus.EASE,//動きの加速減速設定
         }
@@ -369,15 +370,15 @@ cookie.js"></script>
             animTimingFunction: Vivus.EASE,//動きの加速減速設定
         }
         );
-        var stroke3;
-        stroke3 = new Vivus('mask_sp1', {//アニメーションをするIDの指定
-            start: 'manual',//自動再生をせずスタートをマニュアルに
-            type: 'scenario-sync',// アニメーションのタイプを設定
-            duration: 500,//アニメーションの時間設定。数字が小さくなるほど速い
-            forceRender: false,//パスが更新された場合に再レンダリングさせない
-            animTimingFunction: Vivus.EASE,//動きの加速減速設定
-        }
-        );
+        // var stroke3;
+        // stroke3 = new Vivus('mask_sp1', {//アニメーションをするIDの指定
+        //     start: 'manual',//自動再生をせずスタートをマニュアルに
+        //     type: 'scenario-sync',// アニメーションのタイプを設定
+        //     duration: 300,//アニメーションの時間設定。数字が小さくなるほど速い
+        //     forceRender: false,//パスが更新された場合に再レンダリングさせない
+        //     animTimingFunction: Vivus.EASE,//動きの加速減速設定
+        // }
+        // );
         var stroke4;
         stroke4 = new Vivus('mask_sp2', {//アニメーションをするIDの指定
             start: 'manual',//自動再生をせずスタートをマニュアルに
@@ -388,8 +389,8 @@ cookie.js"></script>
         }
         );
         $(window).on('load', function () {
-            $("#splash").delay(6000).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
-            $("#splash_logo").delay(6000).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
+            $("#splash").delay(5000).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
+            $("#splash_logo").delay(5000).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
             stroke.play();//SVGアニメーションの実行
         });
         window.addEventListener("scroll", function () {

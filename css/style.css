@@ -908,15 +908,18 @@ small {
   .subtitle {
     font-size: 16px;
   }
-
+  .top_background_line {
+    width: 800px;
+    right: -14%;
+  }
+  .catch_copy {
+    top: 37%;
+    right: 74px;
+  }
   .works_button_text,
   .aboutme_button_text,
   .toppage_button_text {
     font-size: 14px;
-  }
-
-  .top_background_line {
-    width: 1000px;
   }
   .concept {
     margin-left: 10px;
@@ -930,6 +933,7 @@ small {
   }
   .scroll1::before {
     height: 375px;
+    width: 2.5px;
   }
   .scroll1 {
     height: 375px;
@@ -1034,6 +1038,9 @@ small {
   }
   .scroll {
     padding-right: 50px;
+  }
+  .works_button a {
+    padding-left: 67px;
   }
 }
 @media screen and (max-width: 572px) {

@@ -29,7 +29,7 @@ header {
   width: 2500px;
   position: absolute;
   top: 0;
-  right: -7px;
+  right: -10px;
   margin-right: calc((100% - 100vw) / 2);
 }
 .aboutme_background_line2 {
