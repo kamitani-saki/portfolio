@@ -562,7 +562,7 @@ textarea {
 }
 .works_background_line svg image {
   width: 100%;
-  transform: translateX(calc(-500px));
+  transform: translateX(calc((1400px - 100%) / 2));
 }
 
 .sp_br {
