@@ -2,6 +2,7 @@
 html {
   overflow-x: hidden;
 }
+
 .center {
   max-width: 1160px;
   margin: 0 auto;
@@ -418,8 +419,7 @@ header {
   display: flex;
   flex-direction: column;
   margin-top: 225px;
-  align-items: center;
-  width: fit-content;
+  text-align: center;
 }
 .aboutme_wrap {
   margin: 160px auto 0;
@@ -468,19 +468,15 @@ header {
   background-position-x: 10%;
   z-index: 100;
 }
+.contact_title {
+  text-align: center;
+}
 .contact_head {
   display: flex;
   flex-direction: column;
   margin-top: 225px;
 }
-.contact_title {
-  text-align: center;
-}
 
-form {
-  padding-left: 10px;
-  padding-right: 10px;
-}
 .contact_description {
   text-align: center;
   margin: 63px auto 113px;
@@ -494,9 +490,18 @@ form {
 label {
   display: block;
 }
-.name {
-  margin-bottom: 12px;
+
+.form_item_label_required {
+  margin-left: 12px;
+  padding: 5px 0;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #e1afb5;
+  color: #fff;
+  font-size: 14px;
 }
+
 input:focus-visible,
 textarea:focus-visible {
   outline: #e1afb5 auto 3px;
@@ -517,14 +522,14 @@ input[type="phone"],
 input[type="email"] {
   width: 830px;
   height: 60px;
-  border-radius: 30px;
+  border-radius: 10px;
   border: solid 1px;
   margin-bottom: 58px;
 }
 textarea {
   width: 830px;
   height: 330px;
-  border-radius: 25px;
+  border-radius: 10px;
   border: solid 1px;
 }
 #message {
@@ -575,7 +580,7 @@ textarea {
   margin: 93px auto 0;
   padding: 5px 10px;
   box-sizing: border-box;
-  border-radius: 37px;
+  border-radius: 10px;
   border: solid 1px #555555;
   color: #555;
 }
@@ -602,6 +607,22 @@ textarea {
   gap: 81px;
   justify-content: space-between;
 }
+.pc_sns_icon {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  padding-top: 20px;
+}
+.pc_sns_icon img {
+  width: 25px;
+}
+.pc_sns_icon {
+  list-style: none;
+  margin-top: 50px;
+  display: flex;
+  gap: 100px;
+}
+
 small {
   display: block;
   text-align: center;
@@ -646,13 +667,13 @@ small {
 .page_top span::after {
   content: "";
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-top: 2px solid;
   border-right: 2px solid;
   transform: rotate(-135deg);
   position: absolute;
-  top: 40%;
+  top: 42%;
   left: 46%;
 }
 .page_top a:hover {
@@ -700,14 +721,12 @@ small {
     margin-right: 36px;
   }
   .contact_description {
-    text-align: left;
+    text-align: center;
     font-size: 14px;
     margin-left: 0;
     line-height: 1.8;
   }
-  .contact_head {
-    flex-direction: row;
-  }
+
   .contact_wrap {
     width: 80%;
   }
@@ -749,6 +768,7 @@ small {
   .pc_logo {
     display: none;
   }
+
   .sp_btn {
     /* pc版で非表示（display:none）にした要素を表示させるため、 display:blockを入れる。*/
     display: block;
@@ -758,11 +778,12 @@ small {
     border: 1px solid #555555;
     cursor: pointer;
     /* 画面を基準にして.sp_btnの位置を移動させる。 */
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 25px;
     z-index: 300;
   }
+
   .sp_btn_line span {
     /* spanタグはインライン要素で横幅の指定はできないため、display:blockを入れる。 */
     display: block;
@@ -828,7 +849,7 @@ small {
   /* 画面に覆い重なるように表示させる。 */
   .sp_header_menu {
     /* sp_navを画面の左上に持ってくる */
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     /* 幅と高さの指定*/
@@ -1021,7 +1042,7 @@ small {
     border-radius: 10px;
   }
   .aboutme_description {
-    width: 100%;
+    width: 115%;
     margin: -150px 0 0 0;
     border-radius: 10px;
   }
@@ -1032,11 +1053,18 @@ small {
     flex-direction: column-reverse;
     align-items: center;
   }
-
+  .aboutme_head,
+  .contact_title {
+    text-align: left;
+  }
   .sp_br {
     display: block;
   }
-
+  .footer_menu ul {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+  }
   .page_top {
     right: -6%;
     bottom: 8%;
@@ -1044,9 +1072,6 @@ small {
   .footer_menu {
     width: 90%;
     max-width: none;
-  }
-  .footer_menu ul {
-    gap: 2%;
   }
   .scroll {
     padding-right: 50px;

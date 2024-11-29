@@ -16,17 +16,14 @@ header {
 .works_head {
   margin-top: 80px;
 }
-main {
-  background-image: url(../images/top_background_left-100.jpg);
-  background-repeat: no-repeat;
-  background-position: -500px 1800px;
-}
+
 .works_lay_main {
   padding-left: 10px;
   padding-right: 10px;
 }
+
 h3 {
-  margin-top: 250px;
+  margin-top: 150px;
   padding-bottom: 20px;
   width: fit-content;
   border-bottom: 1px solid;
@@ -35,7 +32,7 @@ h3 {
   margin-left: 100px;
 }
 .details_table {
-  width: 700px;
+  width: 745px;
   max-width: 100%;
   height: fit-content;
   background-color: #fbf3f4;
@@ -58,6 +55,7 @@ dt {
 dd {
   width: 60%;
   text-align: left;
+  line-height: 1.8;
 }
 .page_selection {
   margin: 140px auto 0;
@@ -66,7 +64,6 @@ dd {
   justify-content: space-between;
 }
 .page_selection a {
-  display: block;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -82,12 +79,22 @@ dd {
 }
 
 .capture_pc {
-  width: 80%;
-  height: fit-content;
-  margin-top: 110px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  max-width: 800px;
 }
 .capture_pc img {
   width: 100%;
+}
+.capture_pc .pc_img {
+  width: 500px;
+}
+.capture_pc .sp_img {
+  width: 250px;
 }
 .works_lay_photo {
   text-align: center;
@@ -96,6 +103,7 @@ dd {
 .works_lay_photo img {
   width: 80%;
 }
+
 @media screen and (max-width: 767px) {
   .details_table {
     width: 70%;

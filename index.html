@@ -70,6 +70,7 @@
                 </h1>
                 <nav class="pc_header_menu">
                     <ul class="gnavi">
+                        <li class="current"><a href="./index.html">top</a></li>
                         <li><a href="./works.html">works</a></li>
                         <li><a href="./aboutme.html">about me</a></li>
                         <li> <a href="#contact">contact</a></li>
@@ -83,12 +84,16 @@
                 </div>
                 <nav class="sp_header_menu">
                     <ul>
+                        <li><a href="./index.html">top</a></li>
                         <li><a href="./works.html">works</a></li>
                         <li><a href="./aboutme.html">about me</a></li>
                         <li> <a href="#contact">contact</a></li>
                         <div class="sp_h_sns_icon">
-                            <li><a href=""><img src="./images/insta_icon_sp.svg" alt=""></a></li>
-                            <li> <a href=""><img src="./images/x_icon_sp.svg" alt=""></a></li>
+                            <li><a href="https://www.instagram.com/kami_tani_design/"><img
+                                        src="./images/insta_icon_sp.svg" alt=""></a>
+                            </li>
+                            <li> <a href="https://x.com/designKamitani"><img src="./images/x_icon_sp.svg" alt=""></a>
+                            </li>
                         </div>
                     </ul>
                 </nav>
@@ -158,38 +163,51 @@
                         <div class="works_content fadein fadein-bottom">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
-                                    <a href="./works_hairsalon.html" class="swiper-slide">
-                                        <h3 class="works_content_title">コーポレートサイト
-                                        </h3>
-                                        <div class="works_img"><img src="./images/top_works1.jpg" alt="">
+                                    <a class="swiper-slide">
+                                        <h3 class="works_content_title">ポートフォリオサイト</h3>
+                                        <div class="works_img">
+                                            <img src="./images/top_w_portfolio.jpg" alt="">
                                         </div>
                                         <p class="works_content_subtitle">design/coding</p>
                                     </a>
+                                    <a href="./works_hairsalon.html" class="swiper-slide">
+                                        <h3 class="works_content_title">webサイト
+                                        </h3>
+                                        <div class="works_img"><img src="./images/top_w_hairsalon.jpg" alt="">
+                                        </div>
+                                        <p class="works_content_subtitle">design</p>
+                                    </a>
                                     <a class="swiper-slide">
-                                        <h3 class="works_content_title">コーポレートサイト</h3>
+                                        <h3 class="works_content_title">webサイト</h3>
                                         <div class="works_img">
-                                            <img src="./images/top_works2.jpg" alt="">
+                                            <img src="./images/top_w_cafe.jpg" alt="">
                                         </div>
                                         <p class="works_content_subtitle">coding</p>
                                     </a>
                                     <a class="swiper-slide">
                                         <h3 class="works_content_title">バナー</h3>
                                         <div class="works_img">
-                                            <img src="./images/top_works3.jpg" alt="">
+                                            <img src="./images/top_w_pop.jpg" alt="">
                                         </div>
                                         <p class="works_content_subtitle">design</p>
                                     </a>
                                     <a class="swiper-slide">
                                         <h3 class="works_content_title">バナー</h3>
                                         <div class="works_img">
-                                            <img src="./images/top_works4.jpg" alt="">
+                                            <img src="./images/top_w_delax.jpg" alt="">
                                         </div>
                                         <p class="works_content_subtitle">design</p>
                                     </a>
                                     <a class="swiper-slide">
                                         <h3 class="works_content_title">バナー</h3>
                                         <div class="works_img">
-                                            <img src="./images/top_works4.jpg" alt="">
+                                            <img src="./images/top_w_workers.jpg" alt="">
+                                        </div>
+                                        <p class="works_content_subtitle">design</p>
+                                    </a> <a class="swiper-slide">
+                                        <h3 class="works_content_title">バナー</h3>
+                                        <div class="works_img">
+                                            <img src="./images/top_w_trip.jpg" alt="">
                                         </div>
                                         <p class="works_content_subtitle">design</p>
                                     </a>
@@ -200,7 +218,7 @@
                                 <div class="swiper-scrollbar"></div>
                             </div>
                         </div>
-                        <!-- <div class="works_solid"></div> -->
+
                     </div>
                     <div class="scroll">
                         <span>Scroll</span>
@@ -271,18 +289,21 @@
                     <p class="contact_description
                 ">お仕事のご依頼、<br class="sp_br">ご相談などお気軽にお問い合わせください。</p>
                     <div class="contact_wrap">
-                        <label for="name" class="name">お名前<br>
-                            <input type="text" id="name" class="solid" name="entry.1805511187" required="required">
-                        </label>
-                        <label for="furigana">フリガナ<br>
-                            <input type="furigana" id="furigana" class="solid" name="1898995089"
-                                required="required"></label>
-                        <label for="phone">電話番号<br>
-                            <input type="phone" id="phone" class="solid" name="54987054"></label>
-                        <label for="email">メールアドレス<br>
-                            <input type="email" id="email" class="solid" name="197742790" required="required"></label>
-                        <label for="message">お問い合せ内容<br>
-                            <textarea id="message" class="solid" name="1281863408"></textarea></label>
+                        <p for="name">お名前<span class="form_item_label_required">必須</span></p>
+                        <input type="text" id="name" class="solid" name="entry.1805511187" required
+                            placeholder="例）　山田　花子">
+
+                        <p for="furigana">フリガナ<span class="form_item_label_required">必須</span></p>
+                        <input type="furigana" id="furigana" class="solid" name="entry.1898995089" required
+                            placeholder="例）　ヤマダ　ハナコ">
+                        <p for="phone">電話番号<span class="form_item_label_required">必須</span></p>
+                        <input type="phone" id="phone" class="solid" name="entry.54987054"
+                            placeholder="例）　000-1234-5678">
+                        <p for="email">メールアドレス<span class="form_item_label_required">必須</span></p>
+                        <input type="email" id="email" class="solid" name="entry.197742790" required
+                            placeholder="例）　example@gmail.com">
+                        <p for="message">お問い合せ内容</p>
+                        <textarea id="message" class="solid" name="entry.1281863408"></textarea>
                         <button class="btn" type="submit">送信する</button>
                     </div>
                 </form>
@@ -306,11 +327,18 @@
 
             <div class="footer_menu">
                 <ul class="gnavi_ft">
-                    <li><a href="#header">home</a></li>
+                    <li><a href="#header">top</a></li>
                     <li><a href="./works.html">works</a></li>
                     <li><a href="./aboutme.html">aboutme</a></li>
                     <li><a href="#contact">contact</a></li>
                 </ul>
+            </div>
+            <div class="pc_sns_icon">
+                <li><a href="https://www.instagram.com/kami_tani_design/"><img src="./images/insta_icon_pc.svg"
+                            alt=""></a>
+                </li>
+                <li> <a href="https://x.com/designKamitani"><img src="./images/x_icon_pc.svg" alt=""></a>
+                </li>
             </div>
             <small>&copy; 2024 kamitani saki portfolio</small>
         </div>
@@ -361,19 +389,9 @@ cookie.js"></script>
             animTimingFunction: Vivus.EASE,//動きの加速減速設定
         }
         );
-
-        // var stroke4;
-        // stroke4 = new Vivus('mask_sp2', {//アニメーションをするIDの指定
-        //     start: 'manual',//自動再生をせずスタートをマニュアルに
-        //     type: 'scenario-sync',// アニメーションのタイプを設定
-        //     duration: 300,//アニメーションの時間設定。数字が小さくなるほど速い
-        //     forceRender: false,//パスが更新された場合に再レンダリングさせない
-        //     animTimingFunction: Vivus.EASE,//動きの加速減速設定
-        // }
-        // );
         $(window).on('load', function () {
-            $("#splash").delay(5000).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
-            $("#splash_logo").delay(5000).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
+            $("#splash").delay(500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
+            $("#splash_logo").delay(500).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
             stroke.play();//SVGアニメーションの実行
         });
         window.addEventListener("scroll", function () {
@@ -392,7 +410,7 @@ cookie.js"></script>
             const scroll2 = window.scrollY;
             console.log(scroll2)
             // 要素の一番上のラインがトップから見てどこに配置されているかを取得
-            const worksTop2 = document.querySelector("#contact").getBoundingClientRect().top
+            const worksTop2 = document.querySelector("#contact").getBoundingClientRect().top + window.scrollY;
             // スクロールされた量が、要素の一番上のラインより大きくなったら、実行
             if (scroll2 > worksTop2) {
                 stroke2.play()
@@ -403,25 +421,15 @@ cookie.js"></script>
             $("#splash_logo").delay(6000).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
             stroke3.play();//SVGアニメーションの実行
         });
-        // window.addEventListener("scroll", function () {
-        //     // ウィンドウがスクロールされている量を取得する
-        //     const scroll4 = window.scrollY;
-        //     console.log(scroll4)
-        //     // #worksの一番上のラインがトップから見てどこに配置されているかを取得
-        //     const worksTop4 = document.querySelector("#works").getBoundingClientRect().top
-        //     // スクロールされた量が、#worksの一番上のラインより大きくなったら、実行
-        //     if (scroll4 > worksTop4) {
-        //         stroke4.play()
-        //     }
-        // });
+
     </script>
     <!-- googleフォーム用ファイル -->
     <script type="text/javascript">
         let submitted = false;
     </script>
-    <!-- ローディング画面を1日に2回表示させないためのフレーム -->
     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
         onload="if(submitted){window.location='./contact.html';}"></iframe>
+
 </body>
 
 </html>

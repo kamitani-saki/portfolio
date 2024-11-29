@@ -12,17 +12,24 @@ header {
   height: auto;
 }
 .works_background_line {
-  width: 2500px;
+  width: 100%; /* 全体幅に自動調整 */
+  max-width: 2500px; /* 最大幅を設定 */
   position: absolute;
-  top: 165px;
+  top: 300px;
   right: 0;
+  overflow: hidden; /* はみ出しを隠す */
+  z-index: 1;
 }
+
 .works_background_line svg {
-  width: 100%;
+  width: 100%; /* 親要素にフィット */
+  height: auto;
+  overflow: hidden; /* SVG自体のはみ出し防止 */
 }
+
 .works_background_line svg image {
-  width: 100%;
-  transform: translateX(calc((2500px - 100%) / 2));
+  width: 100%; /* 幅をSVGに合わせる */
+  transform: translateX(0); /* 中央調整を解除 */
 }
 .works_head {
   margin-top: 80px;
@@ -31,9 +38,11 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
   margin-top: 235px;
   padding-left: 20px;
   padding-right: 20px;
+  z-index: 100;
 }
 .workspage_content {
   width: 540px;
@@ -44,6 +53,10 @@ header {
 }
 h3 {
   margin-top: 20px;
+}
+.workspage_flex {
+  display: flex;
+  gap: 10px;
 }
 .workspage_wrap p {
   background-color: #d48d95;

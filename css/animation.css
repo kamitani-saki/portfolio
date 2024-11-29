@@ -1,5 +1,5 @@
 @charset "utf-8";
-/*===== キャッチコピーの文字が浮き出る ====*/
+/*========= キャッチコピーの文字が浮き出る =========*/
 .slideConts {
   opacity: 0;
 }
@@ -26,7 +26,6 @@
 }
 
 /*========= LoadingのためのCSS ===============*/
-
 /* Loading背景画面設定　*/
 #splash {
   /*fixedで全面に固定*/
@@ -36,7 +35,6 @@
   z-index: 999;
   background: white;
 }
-
 /* Loading画像中央配置　*/
 #splash_logo {
   position: absolute;
@@ -45,9 +43,7 @@
   width: 2500px;
   margin-top: 10px;
 }
-
 /* Loading アイコンの大きさ設定　*/
-
 #splash_logo svg {
   width: 100%;
 }
@@ -55,6 +51,7 @@
   width: 100%;
   transform: translateX(calc((2500px - 100%) / 2));
 }
+
 /*========= SVG操作手書き風にするためのCSS ===============*/
 #mask .st0,
 #mask1 .st1,
@@ -76,7 +73,7 @@
   transition-delay: 0s;
 }
 
-/* =========conceptの横の線 */
+/* =========conceptの横の線 =========*/
 /* スクロールダウンの位置 */
 .scroll1 {
   width: 1px;
@@ -90,7 +87,7 @@
   content: "";
   height: 490px;
   margin: auto;
-  width: 1.5px;
+  width: 3px;
   z-index: 2;
 }
 /* 線の背景色 */
@@ -100,7 +97,6 @@
   content: "";
   height: 490px;
   margin-top: -490px;
-
   width: 1.5px;
 }
 /* 線のアニメーション */
@@ -119,7 +115,7 @@
   }
 }
 
-/* ====worksのスクロール線のアニメーション==== */
+/* ========= worksのスクロール線のアニメーション ========= */
 /* スクロールダウンの位置 */
 .scroll {
   position: absolute;
@@ -159,7 +155,7 @@
   }
 }
 
-/* ======テキストナビゲーション ====== */
+/* ======naviの下線、背景 ====== */
 .gnavi li:not(:last-child) a,
 .gnavi_ft li a {
   /*線の基点とするためrelativeを指定*/
@@ -187,20 +183,11 @@
 .gnavi_ft li a:hover::after {
   transform: scale(1, 1); /*X方向にスケール拡大*/
 }
-
-/*==================================================
-共通　横並びのための設定
-===================================*/
-
+/* 横並び */
 .gnavi li a,
 .gnavi_ft li a {
   display: block;
 }
-
-/*==================================================
-　5-3-5 左から右に背景が伸びる
-===================================*/
-
 /*背景の設定*/
 .gnavi li:last-child a {
   /*背景色の基点とするためrelativeを指定*/
@@ -223,7 +210,6 @@
   transition: all 0.5s;
   opacity: 0; /*はじめは透過0*/
 }
-
 /*現在地とhoverの設定*/
 .gnavi li:last-child a:hover::after {
   /*背景の形状*/
@@ -234,8 +220,7 @@
   color: #fff;
 }
 
-/* スクロールしたら下からふわっと */
-
+/* ========= スクロールしたら下からふわっと =========*/
 .fadein {
   opacity: 0;
   transform: translate(0, 0);
@@ -258,7 +243,6 @@
   animation-fill-mode: forwards;
   opacity: 0;
 }
-
 .fadeUpTrigger2 {
   opacity: 0;
 }
@@ -268,7 +252,6 @@
   animation-fill-mode: forwards;
   opacity: 0;
 }
-
 @keyframes fadeUpAnime {
   from {
     opacity: 0;
@@ -277,23 +260,5 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-/* ぼかしから出現 */
-.blur {
-  animation-name: blurAnime;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes blurAnime {
-  from {
-    filter: blur(10px);
-    transform: scale(1.02);
-  }
-
-  to {
-    filter: blur(0);
-    transform: scale(1);
   }
 }

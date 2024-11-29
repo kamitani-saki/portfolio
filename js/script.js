@@ -1,4 +1,4 @@
- //===== sp版のぼたん
+ //===== レスポンシブ　sp版のナビボタン
  $(function () {
     // sp_btnがクリックされたとき
     $('.sp_btn').on('click', function () {
@@ -19,7 +19,6 @@ const changeVisibility = () => {
         ele.css('visibility', 'hidden');
     }
 }
-//======SVGアニメーションの描画
 
 //======== キャッチコピーの浮き出る文字
 function BlurTextAnimeControl() {
@@ -50,8 +49,7 @@ $(window).scroll(function () {
         }
     });
 });
-
-    // スクロールしたら要素が現れる
+// ======スクロールしたら下からふわっと　worksページ
 // 動きのきっかけとなるアニメーションの名前を定義
 function fadeAnime(){
     //ふわっと動くきっかけのクラス名と動きのクラス名の設定
@@ -67,13 +65,11 @@ function fadeAnime(){
     // 画面外に出たらfadeInというクラス名を外す
     }
     });
-
 }
 // 画面をスクロールをしたら動かしたい場合の記述
 $(window).scroll(function (){
     fadeAnime();/* アニメーション用の関数を呼ぶ*/
   });// ここまで画面をスクロールをしたら動かしたい場合の記述
-
 
 //===== worksスライダー
 const mySwiper = new Swiper('.swiper', {
@@ -90,6 +86,7 @@ const mySwiper = new Swiper('.swiper', {
     touchRatio: 1, // タッチ操作を有効化
     simulateTouch: true, // モバイルでタッチ操作をシミュレート
     });
+
 // ========スクロールしたら現れるtoppageボタン
 //pagetop
 $(function () {
@@ -115,13 +112,11 @@ $(function () {
     
 
  //同じ日付で2回目以降ならローディング画面非表示の設定
-
 var splash_text = $.cookie('accessdate'); //キーが入っていれば年月日を取得
 var myD = new Date();//日付データを取得
 var myYear = String(myD.getFullYear());//年
 var myMonth = String(myD.getMonth() + 1);//月
 var myDate = String(myD.getDate());//日
-    
 if (splash_text != myYear + myMonth + myDate) {//cookieデータとアクセスした日付を比較↓
         $("#splash").css("display", "block");//１回目はローディングを表示
         setTimeout(function () {
