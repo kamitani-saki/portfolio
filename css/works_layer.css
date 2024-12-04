@@ -107,7 +107,6 @@ dd {
 
 @media screen and (max-width: 767px) {
   .details_table {
-    width: 70%;
     background-color: transparent;
     text-align: left;
     margin-top: 70px;
@@ -119,6 +118,7 @@ dd {
   }
   .detail {
     display: block;
+    margin: 0 auto;
   }
   .detail:not(:last-child) {
     border-bottom: none;
@@ -138,6 +138,7 @@ dd {
   .works_all_text {
     font-size: 14px;
   }
+  .before_button,
   .after_button {
     font-size: 12px;
   }
