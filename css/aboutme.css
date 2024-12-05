@@ -321,6 +321,12 @@ main {
   .coding_content dt {
     font-size: 24px;
   }
+  .skill_icon_d {
+    gap: 5px;
+  }
+  .skill_icon_d img {
+    width: 40%;
+  }
   .design_icon,
   .coding_icon {
     width: 50%;

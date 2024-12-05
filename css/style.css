@@ -22,6 +22,10 @@ html {
   margin: 140px auto 0;
   width: fit-content;
 }
+.aboutme_button {
+  position: relative;
+  z-index: 150;
+}
 .works_button a,
 .aboutme_button a,
 .toppage_button a,
@@ -31,8 +35,9 @@ html {
   align-items: center;
   gap: 12px;
   z-index: 150;
-  padding-left: 30px;
+  margin-left: 85px;
 }
+
 .works_button_text,
 .aboutme_button_text,
 .toppage_button_text,
@@ -300,7 +305,7 @@ header {
   margin: 0 auto;
 }
 .catch_copy_lo {
-  top: 27%;
+  top: 35%;
 }
 .catch_copy_main {
   writing-mode: vertical-rl;
@@ -312,7 +317,7 @@ header {
 .top_background_line {
   position: absolute;
   top: 0%;
-  right: -4%;
+  right: -2.5%;
   width: 2500px;
 }
 .top_background_line img {
@@ -1081,6 +1086,12 @@ small {
   }
 }
 @media screen and (max-width: 572px) {
+  .works_button a,
+  .aboutme_button a,
+  .toppage_button a,
+  .works_all_btn {
+    margin-left: 70px;
+  }
 }
 @media screen and (max-width: 500px) {
   .catch_copy {
@@ -1092,6 +1103,9 @@ small {
   }
   .page_top {
     right: -10%;
+  }
+  .works_all_btn span {
+    left: -20px;
   }
 }
 @media screen and (max-width: 364px) {

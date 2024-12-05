@@ -136,7 +136,8 @@ dd {
     background-image: none;
   }
   .works_all_text {
-    font-size: 14px;
+    font-size: 12px;
+    text-align: center;
   }
   .before_button,
   .after_button {
