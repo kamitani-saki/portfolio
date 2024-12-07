@@ -1081,9 +1081,6 @@ small {
   .scroll {
     padding-right: 50px;
   }
-  .works_button a {
-    padding-left: 67px;
-  }
 }
 @media screen and (max-width: 572px) {
   .works_button a,
@@ -1108,6 +1105,7 @@ small {
     left: -20px;
   }
 }
+
 @media screen and (max-width: 364px) {
   .page_top {
     right: -14%;
